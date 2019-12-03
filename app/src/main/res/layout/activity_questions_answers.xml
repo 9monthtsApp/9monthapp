@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/babylegs"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageView
+        android:id="@+id/Image_Logo"
+        android:layout_width="160dp"
+        android:layout_height="80dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="20dp"
+        app:srcCompat="@drawable/mini_logo" />
+
+    <EditText
+        android:id="@+id/title_qa"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="left"
+        android:layout_marginHorizontal="100px"
+        android:background="#00D2F8EF "
+        android:drawableStart="@drawable/qaicon"
+        android:hint="  Questions and answers"
+        android:inputType="text"
+        android:shadowColor="#D2F8EF"
+        android:textColorHighlight="#FFEBCD"
+        android:textColorHint="#202020"
+        android:layout_marginTop="10dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+
+    <LinearLayout
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="50dp">
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+            android:id="@+id/nutrition"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:textColorHint="#FFFFFF"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/food"
+            android:hint="Nutrition"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/womenDiseases"
+            android:layout_width="300dp"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginTop="60dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/womendiseases"
+            android:hint="Women's diseases"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/germs"
+            android:layout_width="300dp"
+            android:layout_marginTop="120dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginHorizontal="100px"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/seek"
+            android:hint="Woman's Diseases"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/birth"
+            android:layout_width="300dp"
+            android:layout_marginTop="180dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginHorizontal="100px"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/babybirth"
+            android:hint="The birth"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/fetus"
+            android:layout_width="300dp"
+            android:layout_marginTop="240dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginHorizontal="100px"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/birth"
+            android:hint="What about our fetus?"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <ImageButton
+            android:id="@+id/go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="320dp"
+            android:paddingLeft="30dp"
+            android:background="#00D2F8EF"
+            ads:srcCompat="@drawable/goback" />
+
+
+
+
+
+    </FrameLayout>
+
+
+
+</LinearLayout>
