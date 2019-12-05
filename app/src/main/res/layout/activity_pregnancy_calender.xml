@@ -37,20 +37,25 @@
         android:textSize="20dp"
         android:textStyle="bold" />
 
-
-    <LinearLayout
-        android:layout_width="600px"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:layout_marginTop="320dp">
-    </LinearLayout>
-
+    <CalendarView
+        android:id="@+id/calendar"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
 
     <FrameLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
+
+        <ImageButton
+            android:id="@+id/go_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:background="#00ffffff"
+            android:paddingLeft="30dp"
+            ads:srcCompat="@drawable/goback" />
 
         <TextView
             android:id="@+id/Informationaboutweeks"
@@ -67,19 +72,15 @@
             android:textStyle="bold" />
 
 
-
-
-
-
-        <ImageButton
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:paddingLeft="30dp"
-            android:background="#00ffffff"
-            ads:srcCompat="@drawable/goback" />
-
-
     </FrameLayout>
+
+    <LinearLayout
+        android:layout_width="600px"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="320dp">
+
+    </LinearLayout>
+
+
 </LinearLayout>
