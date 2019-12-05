@@ -57,7 +57,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
                 android:layout_marginHorizontal="100px"
-                android:hint="enter phone weight"
+                android:hint="enter your weight"
                 android:inputType="number"
                 android:textColorHighlight="#673AB7"
                 android:textColorHint="#202020" />

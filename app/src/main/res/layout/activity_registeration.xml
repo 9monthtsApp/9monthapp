@@ -46,46 +46,62 @@
 
 
         <EditText
-            android:id="@+id/enterName"
+            android:id="@+id/enterFirstName"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="55dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
-            android:hint="enter your name"
+            android:hint="enter your first name"
             android:inputType="text"
             android:textColorHint="#202020"
             android:textColorHighlight="#673AB7" />
 
         <EditText
-            android:id="@+id/enterPhone"
+            android:id="@+id/enterLastName"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="110dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
-            android:hint="enter phone number"
-            android:inputType="phone"
+            android:hint="enter your last name"
+            android:inputType="text"
             android:textColorHint="#202020"
             android:textColorHighlight="#673AB7" />
 
         <EditText
-            android:id="@+id/enterID"
+            android:id="@+id/enterEmail"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:layout_marginTop="165dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
-            android:hint="choose ID"
-            android:inputType="number"
+            android:hint="enter your email"
+            android:inputType="textEmailAddress"
             android:textColorHint="#202020"
             android:textColorHighlight="#673AB7" />
+
+
+        <EditText
+            android:id="@+id/enterweek"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:layout_marginTop="220dp"
+            android:hint="my pregnancy week"
+            android:inputType="numberDecimal"
+            android:textColorHighlight="#673AB7"
+            android:textColorHint="#202020" />
+
+
+
 
         <EditText
             android:id="@+id/enterPass"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
+            android:layout_marginTop="275dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:hint="enter password (numerical)"
@@ -97,7 +113,7 @@
             android:id="@+id/secPass"
             android:layout_width="300dp"
             android:layout_height="wrap_content"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="330dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:hint="enter your password again"
@@ -105,10 +121,24 @@
             android:textColorHint="#202020"
             android:textColorHighlight="#673AB7" />
 
+        <EditText
+            android:id="@+id/checkPass"
+            android:layout_width="300dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="370dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:hint=""
+            android:inputType="text"
+            android:textColorHint="#ff1a1a"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:textColorHighlight="#673AB7" />
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="100dp"
-            android:layout_marginTop="400dp"
+            android:layout_marginTop="420dp"
             android:orientation="horizontal">
 
 
@@ -117,25 +147,35 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:paddingLeft="30dp"
+                android:layout_marginTop="10dp"
                 android:background="#00D2F8EF"
                 ads:srcCompat="@drawable/goback" />
 
             <LinearLayout
-                android:layout_width="250dp"
+                android:layout_width="130dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"></LinearLayout>
 
-            <ImageButton
-                android:id="@+id/continueButton"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_gravity="right"
-                android:layout_marginRight="30dp"
-                android:background="#00D2F8EF"
-                ads:srcCompat="@drawable/forword" />
+            <Button
+                android:id="@+id/createAccount"
+                android:layout_width="180dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginRight="10dp"
+                android:textColorHint="#FFFFFF"
+                android:background="#80ffb3b3"
+                android:hint="Create account"
+                android:textSize="20dp"
+                android:textStyle="bold"
+                android:drawableStart="@drawable/adduser" />
+
+
+
 
 
         </LinearLayout>
+
+
 
 
     </FrameLayout>

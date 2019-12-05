@@ -31,7 +31,7 @@
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100px"
         android:drawableStart="@drawable/user"
-        android:hint="    enter your ID"
+        android:hint="    enter your email"
         android:inputType="textEmailAddress"
         android:textColorHighlight="#FFDFDD"
         android:textColorLink="#FFDFDD" />
@@ -45,7 +45,7 @@
 
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/passwordAd"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="100px"
@@ -79,7 +79,7 @@
     </LinearLayout>
 
     <Button
-        android:id="@+id/registration"
+        android:id="@+id/createAccount"
         android:layout_width="1000px"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
@@ -87,7 +87,7 @@
         android:textColor="#FFF"
         android:textSize="18dp"
         android:textStyle="bold"
-        android:text="Registration for new patients" />
+        android:text="create a new account" />
 
 
 </LinearLayout>
