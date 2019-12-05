@@ -9,7 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".myInfoPage"></activity>
+        <activity android:name=".sportArticle2"></activity>
+        <activity android:name=".sportArtical1" />
+        <activity android:name=".sportsArticles" />
+        <activity android:name=".nurtiationArtical4" />
+        <activity android:name=".nutritaion_artical3" />
+        <activity android:name=".nutritaion_artical2" />
+        <activity android:name=".nutritaionArtical1" />
+        <activity android:name=".nutritonAndDietArticals" />
+        <activity android:name=".myInfoPage" />
         <activity android:name=".questionsAnswers" />
         <activity android:name=".articles" />
         <activity android:name=".pregnancyCalender" />

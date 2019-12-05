@@ -121,19 +121,6 @@
             android:textColorHint="#202020"
             android:textColorHighlight="#673AB7" />
 
-        <EditText
-            android:id="@+id/checkPass"
-            android:layout_width="300dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="370dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="100px"
-            android:hint=""
-            android:inputType="text"
-            android:textColorHint="#ff1a1a"
-            android:textSize="20dp"
-            android:textStyle="bold"
-            android:textColorHighlight="#673AB7" />
 
         <LinearLayout
             android:layout_width="match_parent"

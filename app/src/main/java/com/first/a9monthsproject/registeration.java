@@ -30,7 +30,7 @@ public class registeration extends AppCompatActivity {
     private EditText weeks;
     private EditText password1;
     private EditText password2;
-    private EditText check;
+   // private EditText check;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mDatabaseReference;
     private FirebaseAuth mAuth;
@@ -49,7 +49,7 @@ public class registeration extends AppCompatActivity {
             weeks = (EditText) findViewById(R.id.enterweek);
             password1 = (EditText) findViewById(R.id.enterPass);
             password2 = (EditText) findViewById(R.id.secPass);
-            check = (EditText) findViewById(R.id.checkPass);
+           // check = (EditText) findViewById(R.id.checkPass);
             returnButton = (ImageButton) findViewById(R.id.go_back);
             createButton = (Button) findViewById(R.id.createAccount);
         }
@@ -89,13 +89,6 @@ public class registeration extends AppCompatActivity {
         if(!TextUtils.isEmpty(fname) && !TextUtils.isEmpty(lname)&& !TextUtils.isEmpty(tmpEmail)
         && !TextUtils.isEmpty(tmpWeeks) && !TextUtils.isEmpty(pass1) && !TextUtils.isEmpty(pass2)){
 
-            if (!pass1.equals(pass2)) {
-
-                check.setText("The passwords you entered are not the same");
-            }
-
-            else{
-
             Toast.makeText(registeration.this ,"creating account", Toast.LENGTH_LONG).show();
             mProgressDialog.isShown();
 
@@ -122,8 +115,7 @@ public class registeration extends AppCompatActivity {
 
             });
         }}
-    }
-
+    
 
     // use the fun to move on to home page
     public void openHomePage() {
