@@ -77,16 +77,16 @@
 
 
         <Button
-            android:id="@+id/germs"
-            android:layout_width="300dp"
-            android:layout_marginTop="120dp"
+            android:id="@+id/vaccinations"
+            android:layout_width="302dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
+            android:layout_marginTop="120dp"
             android:background="#80FFE4F1"
             android:drawableStart="@drawable/germ"
-            android:hint="Woman's Diseases"
+            android:hint="Vaccinations "
+            android:textColorHint="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
 

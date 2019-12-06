@@ -1,48 +1,48 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:ads="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+xmlns:ads="http://schemas.android.com/apk/res-auto"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:background="@drawable/marbel"
+android:orientation="vertical"
+tools:context=".MainActivity">
+
+
+<ImageView
+    android:id="@+id/Image_Logo"
+    android:layout_width="140dp"
+    android:layout_height="70dp"
+    android:layout_gravity="right|top"
+    android:layout_marginTop="30dp"
+    android:background="#00000000"
+    android:shadowColor="#D2F8EF"
+    app:srcCompat="@drawable/mini_logo" />
+
+<EditText
+    android:id="@+id/vaccinationsArticles"
+    android:layout_width="280dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="left"
+    android:layout_marginHorizontal="100px"
+    android:layout_marginTop="20dp"
+    android:background="#00000000"
+    android:drawableStart="@drawable/nutritondnddiet"
+    android:hint="  Nutriton and diet articals"
+    android:inputType="text"
+    android:shadowColor="#D2F8EF"
+    android:textColorHighlight="#FFEBCD"
+    android:textColorHint="#202020"
+    android:textSize="20dp"
+    android:textStyle="bold" />
+
+
+
+<FrameLayout
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@drawable/marbel"
-    android:orientation="vertical"
-    tools:context=".MainActivity">
-
-
-    <ImageView
-        android:id="@+id/Image_Logo"
-        android:layout_width="140dp"
-        android:layout_height="70dp"
-        android:layout_gravity="right|top"
-        android:layout_marginTop="30dp"
-        android:background="#00000000"
-        android:shadowColor="#D2F8EF"
-        app:srcCompat="@drawable/mini_logo" />
-
-    <EditText
-        android:id="@+id/title_nutritonAndDietArticals"
-        android:layout_width="280dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="left"
-        android:layout_marginHorizontal="100px"
-        android:layout_marginTop="20dp"
-        android:background="#00000000"
-        android:drawableStart="@drawable/nutritondnddiet"
-        android:hint="  Nutriton and diet articals"
-        android:inputType="text"
-        android:shadowColor="#D2F8EF"
-        android:textColorHighlight="#FFEBCD"
-        android:textColorHint="#202020"
-        android:textSize="20dp"
-        android:textStyle="bold" />
-
-
-
-    <FrameLayout
-        android:layout_width="match_parent"
-        android:layout_marginTop="40dp"
-        android:layout_height="match_parent">
+    android:layout_marginTop="40dp"
+    android:layout_height="match_parent">
 
     <Button
         android:id="@+id/Weight_gain"
