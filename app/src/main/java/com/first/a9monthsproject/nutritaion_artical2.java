@@ -11,6 +11,7 @@ public class nutritaion_artical2 extends AppCompatActivity {
 
     private Button returnButton;
     private Button returnMainArtical;
+    
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
