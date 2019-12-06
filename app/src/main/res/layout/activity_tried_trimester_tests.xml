@@ -72,7 +72,7 @@
                 <TextView
                     android:id="@+id/part1"
                     android:layout_width="348dp"
-                    android:layout_height="116dp"
+                    android:layout_height="145dp"
                     android:layout_gravity="left"
                     android:layout_marginTop="30sp"
                     android:layout_weight="1"
@@ -95,7 +95,7 @@ Price – Free"
                     android:layout_weight="1"
                     android:paddingLeft="30dp"
                     android:paddingTop="5dp"
-                    android:text="Early Systems Review-"
+                    android:text="Weight Assessment -"
                     android:textColor="#fd9ebd"
                     android:textSize="18dp"
                     android:textStyle="bold"></TextView>
@@ -107,9 +107,9 @@ Price – Free"
                     android:layout_gravity="left"
                     android:layout_marginTop="30sp"
                     android:paddingLeft="30dp"
-                    android:text="The test examine the integrity of the fetal body's and its function.
-Performed during week 14-16.
-Price - The test is not included in the health basket."
+                    android:text="Ultrasound test for fetal weight assessment, growth rate, posture (head or buttock) and position (lengthwise, width or diagonal).
+Performed at week 30-34
+Price - free (quarterly fee of 33 NIS)"
                     android:textColor="#000000"
                     android:textSize="18dp" />
 
@@ -123,7 +123,7 @@ Price - The test is not included in the health basket."
                     android:layout_weight="1"
                     android:paddingLeft="30dp"
                     android:paddingTop="5dp"
-                    android:text="Alpha fetoprotein-"
+                    android:text="Culture to gbs-"
                     android:textColor="#fd9ebd"
                     android:textSize="18dp"
                     android:textStyle="bold"></TextView>
@@ -135,11 +135,9 @@ Price - The test is not included in the health basket."
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
-                    android:text="This test examines three proteins in the mother's blood and calculates the result with fetal age, mother's age, weight, and other data.
-The test identifies more than 65% of fetuses at risk of Down syndrome and other malformations.
-*** If we add a fourth protein test, we can find 70-75 %.
-Performed during week 16-19
-Price - a deductible of 62 NIS. (For the fourth protein there is an extra charge)."
+                    android:text="Women with pregnant in risk factors need to test carriers of the gbs bacteria. If the culture is positive, the women should receive antibiotics at birth.
+Performed during 35-37 weeks pregnant.
+Price - for women with risk factors – free"
                     android:textColor="#000000"
                     android:textSize="18dp" />
 
@@ -153,7 +151,7 @@ Price - a deductible of 62 NIS. (For the fourth protein there is an extra charge
                     android:layout_weight="1"
                     android:paddingLeft="30dp"
                     android:paddingTop="5dp"
-                    android:text="Amniotic fluid test -"
+                    android:text="Nurse follow-up of a third trimester"
                     android:textColor="#fd9ebd"
                     android:textSize="18dp"
                     android:textStyle="bold"></TextView>
@@ -161,44 +159,18 @@ Price - a deductible of 62 NIS. (For the fourth protein there is an extra charge
                 <TextView
                     android:id="@+id/part4"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
+                    android:layout_height="82dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
-                    android:text="The test checks chromosomal abnormalities in the fetus such as Down syndrome. In the laboratory, the cells are grown to examine the chromosomes of the fetus in order to check their propriety in terms of structure and number.
-The test can provide an unequivocal diagnosis for Down's syndrome.
-Performed during week 20-16
-Price - amniocentesis test is included in the health basket and is free of charge for women over the age of 35 at the time of pregnancy or pregnancy in risk."
+                    android:text="Checks blood pressure, weight, protein in the urine and edema.
+It takes place once every two weeks from week 36 to week 40
+Price – Free
+"
                     android:textColor="#000000"
                     android:textSize="18dp" />
 
 
-                <TextView
-                    android:id="@+id/title5"
-                    android:layout_width="348dp"
-                    android:layout_height="27dp"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="30sp"
-                    android:layout_weight="1"
-                    android:paddingLeft="30dp"
-                    android:paddingTop="5dp"
-                    android:text="Late Systems Review -"
-                    android:textColor="#fd9ebd"
-                    android:textSize="18dp"
-                    android:textStyle="bold"></TextView>
 
-                <TextView
-                    android:id="@+id/part5"
-                    android:layout_width="399dp"
-                    android:layout_height="221dp"
-                    android:layout_gravity="left"
-                    android:layout_marginTop="30sp"
-                    android:paddingLeft="30dp"
-                    android:text="Testing the integrity of the fetal body systems and their functioning. The test is performed by an ultrasound device.
-The test is important because there are systems that develop only after the 15th week of pregnancy, and there are defects that develop slowly and are expressed only after the 20th week of pregnancy.
-Performed during week 19-24
-Price - free (quarterly fee of 34 NIS)."
-                    android:textColor="#000000"
-                    android:textSize="18dp" />
 
 
                 <LinearLayout
