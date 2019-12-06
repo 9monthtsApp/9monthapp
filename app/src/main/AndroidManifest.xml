@@ -9,7 +9,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".sportArticle2"></activity>
+        <activity android:name=".triedTrimesterTests"></activity>
+        <activity android:name=".secTrimsterTests" />
+        <activity android:name=".prePregnancyTests" />
+        <activity android:name=".firstTrimester" />
+        <activity android:name=".test_InfoPage" />
+        <activity android:name=".sportArticle2" />
         <activity android:name=".sportArtical1" />
         <activity android:name=".sportsArticles" />
         <activity android:name=".nurtiationArtical4" />

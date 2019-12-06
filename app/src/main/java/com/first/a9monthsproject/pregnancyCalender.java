@@ -15,6 +15,7 @@ public class pregnancyCalender extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregnancy_calender);
+
         Date firstWeek = new Date(2019, 11, 3);
         Calendar a = Calendar.getInstance();
 
@@ -26,5 +27,6 @@ public class pregnancyCalender extends AppCompatActivity {
         Toast.makeText(pregnancyCalender.this, "week" + weekOne , Toast.LENGTH_LONG).show();
 
 
-    }
 }
+}
+
