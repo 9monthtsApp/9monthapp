@@ -28,7 +28,7 @@
         android:layout_marginHorizontal="100px"
         android:layout_marginTop="25dp"
         android:background="#00000000"
-        android:hint="vaccinations before pregnancy"
+        android:hint="Vaccinations before pregnancy"
         android:inputType="text"
         android:textColorHint="#202020"
         android:textSize="20dp"
@@ -84,7 +84,7 @@
                 <TextView
                     android:id="@+id/prat3"
                     android:layout_width="wrap_content"
-                    android:layout_height="56dp"
+                    android:layout_height="238dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
                     android:text="1. Vaccines against measles, mumps, rubella and chickenpox
@@ -97,42 +97,38 @@ The vaccines against these diseases are live-attenuated vaccines and are not giv
                 <TextView
                     android:id="@+id/part4"
                     android:layout_width="wrap_content"
-                    android:layout_height="56dp"
+                    android:layout_height="436dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
-                    android:text="3. Reduces the incidence of back pain and severity."
+                    android:text="There are health risks to the woman and the fetus if the woman becomes infected during these illnesses:
+Measles - A woman who gets measles during pregnancy is at higher risk of premature birth and miscarriage.
+Mumps - A woman with mumps in the first trimester of pregnancy is at increased risk of fetal death.
+Land - A woman who is in the soil during pregnancy may abort the fetus. In addition, there is a high risk that the baby will be born with severe defects including heart defects, eyes and brain.
+Chickenpox - A woman who has chickenpox during pregnancy is at increased risk of serious illness and complications such as pneumonia. In addition, there is a risk that the baby will be born with defects."
                     android:textColor="#000000"
                     android:textSize="18dp" />
+
 
                 <TextView
                     android:id="@+id/part5"
                     android:layout_width="wrap_content"
-                    android:layout_height="56dp"
+                    android:layout_height="156dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
-                    android:text="4. Enhances overall well-being and enhances satisfaction and self-image."
+                    android:text="2. Papilloma virus vaccine
+As part of the recommended vaccination routine for women of childbearing potential, women aged 9 - 26 are recommended to be vaccinated against the papillomavirus.
+Vaccination is not recommended during pregnancy."
                     android:textColor="#000000"
                     android:textSize="18dp" />
-
 
                 <TextView
                     android:id="@+id/part6"
                     android:layout_width="wrap_content"
-                    android:layout_height="59dp"
+                    android:layout_height="142dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
-                    android:text="5. Contributes to a rapid return to optimal postpartum function."
-                    android:textColor="#000000"
-                    android:textSize="18dp" />
-
-
-                <TextView
-                    android:id="@+id/part7"
-                    android:layout_width="wrap_content"
-                    android:layout_height="78dp"
-                    android:layout_gravity="left"
-                    android:paddingLeft="30dp"
-                    android:text="6. Reduces the levels of stress, anxiety and depression that often occur during pregnancy and after childbirth."
+                    android:text="
+Vaccination against papillomavirus prevents most cervical cancers and a significant proportion of vulvar, vaginal, rectal, and oral and pharyngeal cancers. The vaccine also prevents genital warts."
                     android:textColor="#000000"
                     android:textSize="18dp" />
 
