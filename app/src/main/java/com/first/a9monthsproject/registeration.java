@@ -29,8 +29,6 @@ public class registeration extends AppCompatActivity {
     private EditText email;
     private EditText weeks;
     private EditText password1;
-    private EditText password2;
-   // private EditText check;
     private FirebaseDatabase mDatabase;
     private DatabaseReference mDatabaseReference;
     private FirebaseAuth mAuth;
@@ -48,8 +46,6 @@ public class registeration extends AppCompatActivity {
             email = (EditText) findViewById(R.id.enterEmail);
             weeks = (EditText) findViewById(R.id.enterweek);
             password1 = (EditText) findViewById(R.id.enterPass);
-            password2 = (EditText) findViewById(R.id.secPass);
-           // check = (EditText) findViewById(R.id.checkPass);
             returnButton = (ImageButton) findViewById(R.id.go_back);
             createButton = (Button) findViewById(R.id.createAccount);
         }
@@ -84,10 +80,10 @@ public class registeration extends AppCompatActivity {
         final String tmpEmail = email.getText().toString().trim();
         final String tmpWeeks = weeks.getText().toString().trim();
         final String pass1 = password1.getText().toString().trim();
-        String pass2 = password2.getText().toString().trim();
+
 
         if(!TextUtils.isEmpty(fname) && !TextUtils.isEmpty(lname)&& !TextUtils.isEmpty(tmpEmail)
-        && !TextUtils.isEmpty(tmpWeeks) && !TextUtils.isEmpty(pass1) && !TextUtils.isEmpty(pass2)){
+        && !TextUtils.isEmpty(tmpWeeks) && !TextUtils.isEmpty(pass1)){
 
             Toast.makeText(registeration.this ,"creating account", Toast.LENGTH_LONG).show();
             mProgressDialog.isShown();

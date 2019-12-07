@@ -80,7 +80,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/Changepassword"
+            android:id="@+id/photoAlbum"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
@@ -88,7 +88,7 @@
             android:background="#706AE6BD"
             android:drawableStart="@drawable/password2"
             android:textColorHint="#FFFFFF"
-            android:hint="Change password"
+            android:hint="My photo album"
             android:layout_marginTop="220dp"
             android:textSize="20dp"
             android:textStyle="bold" />

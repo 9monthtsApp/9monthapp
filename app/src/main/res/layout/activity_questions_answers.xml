@@ -20,10 +20,11 @@
 
     <EditText
         android:id="@+id/title_qa"
-        android:layout_width="230dp"
+        android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginHorizontal="100px"
+        android:layout_marginTop="10dp"
         android:background="#00D2F8EF "
         android:drawableStart="@drawable/qaicon"
         android:hint="  Questions and answers"
@@ -31,7 +32,6 @@
         android:shadowColor="#D2F8EF"
         android:textColorHighlight="#FFEBCD"
         android:textColorHint="#202020"
-        android:layout_marginTop="10dp"
         android:textSize="20dp"
         android:textStyle="bold" />
 
@@ -56,13 +56,13 @@
             android:textColorHint="#FFFFFF"
             android:background="#805D595B"
             android:drawableStart="@drawable/food"
-            android:hint="Nutrition"
+            android:hint="Nutrition and sport"
             android:textSize="20dp"
             android:textStyle="bold" />
 
 
         <Button
-            android:id="@+id/womenDiseases"
+            android:id="@+id/VaccinesAndTests"
             android:layout_width="300dp"
             android:textColorHint="#FFFFFF"
             android:layout_marginTop="60dp"
@@ -70,14 +70,14 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:background="#805D595B"
-            android:drawableStart="@drawable/womendiseases"
-            android:hint="Women's diseases"
+            android:drawableStart="@drawable/vaccinationlogo"
+            android:hint="Vaccines and tests"
             android:textSize="20dp"
             android:textStyle="bold" />
 
 
         <Button
-            android:id="@+id/vaccinations"
+            android:id="@+id/Pregnantrights"
             android:layout_width="300dp"
             android:layout_marginTop="120dp"
             android:layout_height="wrap_content"
@@ -85,8 +85,8 @@
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
             android:background="#805D595B"
-            android:drawableStart="@drawable/seek"
-            android:hint="Woman's Diseases"
+            android:drawableStart="@drawable/rights"
+            android:hint="Pregnant rights"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -99,13 +99,13 @@
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
             android:background="#805D595B"
-            android:drawableStart="@drawable/babybirth"
+            android:drawableStart="@drawable/baby4"
             android:hint="The birth"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/fetus"
+            android:id="@+id/afterBirth"
             android:layout_width="300dp"
             android:layout_marginTop="240dp"
             android:layout_height="wrap_content"
@@ -113,8 +113,22 @@
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
             android:background="#805D595B"
-            android:drawableStart="@drawable/birth"
-            android:hint="What about our fetus?"
+            android:drawableStart="@drawable/babyicon"
+            android:hint="After birth and the baby"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/breastFeeding"
+            android:layout_width="300dp"
+            android:layout_marginTop="300dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginHorizontal="100px"
+            android:background="#805D595B"
+            android:drawableStart="@drawable/breast1"
+            android:hint="breast feeding"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -122,7 +136,7 @@
             android:id="@+id/go_back"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="320dp"
+            android:layout_marginTop="370dp"
             android:paddingLeft="30dp"
             android:background="#00D2F8EF"
             ads:srcCompat="@drawable/goback" />
