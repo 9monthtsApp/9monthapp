@@ -20,7 +20,7 @@
         android:shadowColor="#D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
 
-    <TextView
+    <EditText
         android:id="@+id/title_test_calender"
         android:layout_width="260dp"
         android:layout_height="wrap_content"

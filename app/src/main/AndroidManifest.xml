@@ -14,6 +14,7 @@
         <activity android:name=".highRiskArticle2" />
         <activity android:name=".highRiskArticle1" />
         <activity android:name=".highRiskArticles" />
+        <activity android:name=".vaccineAndTestingQA" />
         <activity android:name=".pregnant_rights_QA" />
         <activity android:name=".breastfeedingQA" />
         <activity android:name=".notritonAndSportQA" />

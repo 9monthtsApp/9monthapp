@@ -13,8 +13,9 @@ public class articles extends AppCompatActivity {
     private Button nutritionButton;
     private Button sportButton;
     private ImageButton returnButton;
-    private ImageButton logoButton;
+
     private Button vaccinationsButton;
+    private Button riskButton;
 
 
     @Override
@@ -22,11 +23,12 @@ public class articles extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_articles);
 
-        nutritionButton= (Button)findViewById(R.id.nutrition);
-        sportButton= (Button)findViewById(R.id.sport);
+        nutritionButton = (Button) findViewById(R.id.nutrition);
+        sportButton = (Button) findViewById(R.id.sport);
         returnButton = (ImageButton) findViewById(R.id.go_back);
-        vaccinationsButton = (Button) findViewById(R.id.vaccinations) ;
-        logoButton = (ImageButton) findViewById(R.id.Image_Logo);
+        vaccinationsButton = (Button) findViewById(R.id.vaccinations);
+        riskButton = (Button) findViewById(R.id.risk);
+
 
         // handle the nutrition Button - move to nutrition articles
         nutritionButton.setOnClickListener(new View.OnClickListener() {
@@ -60,14 +62,14 @@ public class articles extends AppCompatActivity {
             }
         });
 
-
-        //move to home page when we push on the logo
-        logoButton.setOnClickListener(new View.OnClickListener() {
+        // handle the return Button - move to home page
+        riskButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomePage();
+                openRiskArticle();
             }
         });
+
     }
 
 
@@ -95,5 +97,9 @@ public class articles extends AppCompatActivity {
         startActivity(in);
     }
 
-
+    //use fun to move on to vaccinations articles page
+    public void openRiskArticle() {
+        Intent in = new Intent(this, highRiskArticles .class);
+        startActivity(in);
+    }
 }
