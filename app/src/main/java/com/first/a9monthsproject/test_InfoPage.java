@@ -14,7 +14,7 @@ public class test_InfoPage extends AppCompatActivity {
     private Button firstBuuton;
     private Button secondBuuton;
     private Button thirdBuuton;
-    private ImageButton logoButton;
+
 
 
     @Override
@@ -26,7 +26,6 @@ public class test_InfoPage extends AppCompatActivity {
         firstBuuton =(Button) findViewById(R.id.firsttrimester);
         secondBuuton =(Button) findViewById(R.id.sectrimester);
         thirdBuuton =(Button) findViewById(R.id.thiredtrimester);
-        logoButton=(ImageButton) findViewById(R.id.Image_Logo);
 
 
         //move to tests list - pre pregnancy
@@ -62,13 +61,7 @@ public class test_InfoPage extends AppCompatActivity {
             }
         });
 
-        //move to home page when we push on the logo 
-        logoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
+ 
     }
 
     //use fun to move on to pre pregnancy tests page

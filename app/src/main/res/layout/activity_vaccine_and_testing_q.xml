@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
 
-    <ImageButton
+    <ImageView
         android:id="@+id/Image_Logo"
         android:layout_width="140dp"
         android:layout_height="100dp"
@@ -28,8 +28,8 @@
         android:layout_marginHorizontal="100px"
         android:layout_marginTop="20dp"
         android:background="#00000000"
-        android:drawableStart="@drawable/rights"
-        android:hint=" Pregnant rights"
+        android:drawableStart="@drawable/vaccinationlogo"
+        android:hint="  Vaccine and Testing "
         android:inputType="text"
         android:shadowColor="#D2F8EF"
         android:textColorHighlight="#FFEBCD"
@@ -73,7 +73,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="What month should I notify my employer of the pregnancy? "
+                        android:text="What tests should be done during pregnancy?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -81,13 +81,13 @@
                     <TextView
                         android:id="@+id/part1"
                         android:layout_width="400dp"
-                        android:layout_height="50dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="left"
                         android:layout_marginTop="75dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Starting the fifth month of pregnancy"
+                        android:text="There are a wide variety of tests to be performed, we recommend that you access the information on the tests found in our tests tab, where all the tests to be performed according to the trimester you are in."
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
@@ -96,11 +96,11 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="115dp"
+                        android:layout_marginTop="200dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="If I was absent from work because of pregnancy, do I still get paid?"
+                        android:text="Is it possible to get vaccinated during pregnancy?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -108,13 +108,14 @@
                     <TextView
                         android:id="@+id/part2"
                         android:layout_width="400dp"
-                        android:layout_height="231dp"
+                        android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginTop="170sp"
+                        android:layout_marginTop="250sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="A pregnant worker who works a full week of work, and more than four hours a day, is entitled to be absent from work for up to 40 hours during the entire pregnancy period, without injury to wages and in addition to the sick days she accrued. A pregnant woman who works less than four hours a day during a full work week is eligible to be absent for 20 hours throughout the pregnancy period (When absenteeism is for medical examinations)."
+                        android:text="Yes, certainly, if it is a vaccine that consists of an inactivated virus, such as a flu vaccine or a pertussis vaccine.
+                        "
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
@@ -123,11 +124,11 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="400sp"
+                        android:layout_marginTop="330sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Is it possible to fire a pregnant woman?"
+                        android:text="The vaccine is dangerous to the fetus?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -137,11 +138,11 @@
                         android:layout_width="400dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginTop="450dp"
+                        android:layout_marginTop="360dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Israeli law prohibits an employer from dismissing a worker during her pregnancy anyway, if the woman is employed in the workplace for six months or more.
+                        android:text="Not at all, thats how he gets antibodies in the first months of his life, when his immune system is still underdeveloped.
                         "
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -151,11 +152,11 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="550sp"
+                        android:layout_marginTop="440sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="If I'm pregnant, do I deserve a annuity?"
+                        android:text="Why does my immune system weaken during pregnancy?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -163,14 +164,15 @@
                     <TextView
                         android:id="@+id/part4"
                         android:layout_width="400dp"
-                        android:layout_height="156dp"
+                        android:layout_height="86dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="580sp"
+                        android:layout_marginTop="490sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text=" A working woman who is forced to stay home while maintaining pregnancy because of her medical risk or the fetus resulting from pregnancy - is guaranteed a pregnancy benefit, which comes to compensate the woman for losing her salary while she is in pregnancy.
-                        "
+                        android:text="During pregnancy, the immune system is in a mild state of repression to serve the purpose of fetal growth under optimal conditions
+
+"
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
@@ -179,11 +181,11 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="720sp"
+                        android:layout_marginTop="560sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="How much time do I get on maternity leave?"
+                        android:text="At what stage of pregnancy should you be vaccinated?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -191,14 +193,13 @@
                     <TextView
                         android:id="@+id/part5"
                         android:layout_width="400dp"
-                        android:layout_height="70dp"
+                        android:layout_height="66dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="770sp"
+                        android:layout_marginTop="610sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="A woman who has worked for 12 consecutive months in the same workplace is entitled to 26 weeks of maternity leave - 14 of which are paid
-                        "
+                        android:text="You can get vaccinated at any stage, from pregnancy planning and throughout pregnancy."
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
@@ -207,11 +208,11 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="850sp"
+                        android:layout_marginTop="670sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="What is the amount of the maternity allowance?"
+                        android:text="What types of testing are exists?"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -219,22 +220,51 @@
                     <TextView
                         android:id="@+id/part6"
                         android:layout_width="400dp"
-                        android:layout_height="138dp"
+                        android:layout_height="121dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="900sp"
+                        android:layout_marginTop="710sp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="If you are an employed or self-employed worker, the birth allowance is calculated per day: the salary or full income as independent in the three months prior to the 1st of the month you stopped working, divided by 90.
+                        android:text="Pregnancy follow-up and medical examinations in pregnancy, screening tests to detect Down syndrome and other malformations and diagnostic tests to detect Down Syndrome and other malformations.
+                        "
+                        android:textColor="#000000"
+                        android:textSize="18dp" />
+
+                    <TextView
+                        android:id="@+id/title7"
+                        android:layout_width="348dp"
+                        android:layout_height="50dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="830sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:text="What are the vaccines that a pregnant woman is recommended to perform (during pregnancy)?"
+                        android:textColor="#fd9ebd"
+                        android:textSize="18dp"
+                        android:textStyle="bold"></TextView>
+
+                    <TextView
+                        android:id="@+id/part7"
+                        android:layout_width="400dp"
+                        android:layout_height="69dp"
+                        android:layout_gravity="left"
+                        android:layout_marginTop="880sp"
+                        android:layout_weight="1"
+                        android:paddingLeft="30dp"
+                        android:paddingTop="5dp"
+                        android:text="Influenza vaccine and pertussis vaccine.
                         "
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
 
+
                     <Button
                         android:id="@+id/goback"
                         android:layout_width="330dp"
-                        android:layout_marginTop="1100dp"
+                        android:layout_marginTop="950dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:textColorHint="#FFFFFF"

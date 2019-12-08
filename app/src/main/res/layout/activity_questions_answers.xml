@@ -19,7 +19,7 @@
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/mini_logo" />
 
-    <EditText
+    <TextView
         android:id="@+id/title_qa"
         android:layout_width="270dp"
         android:layout_height="wrap_content"

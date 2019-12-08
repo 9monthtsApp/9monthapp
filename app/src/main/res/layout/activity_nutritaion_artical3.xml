@@ -20,7 +20,7 @@
         android:shadowColor="#D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
 
-    <EditText
+    <TextView
         android:id="@+id/title_artical2"
         android:layout_width="370dp"
         android:layout_height="50dp"

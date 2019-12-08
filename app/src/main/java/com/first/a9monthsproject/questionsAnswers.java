@@ -43,6 +43,13 @@ public class questionsAnswers extends AppCompatActivity {
             }
         });
 
+        VaccomationButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openVaccineAndTestQAPage();
+            }
+        });
+
         //handle breast button -> move to breastfeeding QA
         breastButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -100,6 +107,12 @@ public class questionsAnswers extends AppCompatActivity {
     //use fun to move to pregnant_rights QA page
     public void openPregnantRightsPage() {
         Intent in = new Intent(this, pregnant_rights_QA.class);
+        startActivity(in);
+    }
+
+    //use fun to move to vaccines and tests QA page
+    public void openVaccineAndTestQAPage() {
+        Intent in = new Intent(this, vaccineAndTestingQA.class);
         startActivity(in);
     }
 
