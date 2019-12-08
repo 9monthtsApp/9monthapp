@@ -16,6 +16,7 @@ public class articles extends AppCompatActivity {
     private ImageButton logoButton;
     private Button vaccinationsButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -59,6 +60,7 @@ public class articles extends AppCompatActivity {
             }
         });
 
+
         //move to home page when we push on the logo
         logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -92,4 +94,6 @@ public class articles extends AppCompatActivity {
         Intent in = new Intent(this, vaccinationsArticles.class);
         startActivity(in);
     }
+
+
 }

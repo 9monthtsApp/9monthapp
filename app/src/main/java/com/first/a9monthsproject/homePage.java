@@ -1,12 +1,11 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class homePage extends AppCompatActivity {
 
@@ -79,12 +78,12 @@ public class homePage extends AppCompatActivity {
             }
         });
 
-        logOutButton.setOnClickListener(new View.OnClickListener() {
+    /*    logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logoutFun();
             }
-        });
+        });*/
     }
 
     //use fun to move on to personal area page
@@ -123,11 +122,11 @@ public class homePage extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to logout
+  /*  //use fun to logout
     public void logoutFun() {
         Intent in = new Intent(this, MainActivity.class);
         startActivity(in);
-    }
+    }*/
 
 
 }

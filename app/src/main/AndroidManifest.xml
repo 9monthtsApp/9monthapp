@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".vaccineAndTestingQA"></activity>
+        <activity android:name=".highRiskArticle4"></activity>
+        <activity android:name=".highRiskArticle3" />
+        <activity android:name=".highRiskArticle2" />
+        <activity android:name=".highRiskArticle1" />
+        <activity android:name=".highRiskArticles" />
         <activity android:name=".pregnant_rights_QA" />
         <activity android:name=".breastfeedingQA" />
         <activity android:name=".notritonAndSportQA" />
