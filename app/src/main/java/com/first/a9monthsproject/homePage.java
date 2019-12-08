@@ -78,6 +78,13 @@ public class homePage extends AppCompatActivity {
                 openArticlesPage();
             }
         });
+
+        logOutButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                logoutFun();
+            }
+        });
     }
 
     //use fun to move on to personal area page
