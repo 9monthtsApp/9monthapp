@@ -13,6 +13,7 @@ public class articles extends AppCompatActivity {
     private Button nutritionButton;
     private Button sportButton;
     private ImageButton returnButton;
+    private ImageButton logoButton;
     private Button vaccinationsButton;
 
     @Override
@@ -24,6 +25,7 @@ public class articles extends AppCompatActivity {
         sportButton= (Button)findViewById(R.id.sport);
         returnButton = (ImageButton) findViewById(R.id.go_back);
         vaccinationsButton = (Button) findViewById(R.id.vaccinations) ;
+        logoButton = (ImageButton) findViewById(R.id.Image_Logo);
 
         // handle the nutrition Button - move to nutrition articles
         nutritionButton.setOnClickListener(new View.OnClickListener() {
@@ -56,6 +58,14 @@ public class articles extends AppCompatActivity {
                 openVaccinationsArticles();
             }
         });
+
+        //move to home page when we push on the logo
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
     }
 
 
@@ -71,7 +81,7 @@ public class articles extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to move on to sport articles page
+    //use fun to move on to home page
     public void openHomePage() {
         Intent in = new Intent(this, homePage.class);
         startActivity(in);

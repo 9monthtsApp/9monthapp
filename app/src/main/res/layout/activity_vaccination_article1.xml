@@ -84,7 +84,7 @@
                 <TextView
                     android:id="@+id/prat3"
                     android:layout_width="wrap_content"
-                    android:layout_height="238dp"
+                    android:layout_height="207dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
                     android:text="1. Vaccines against measles, mumps, rubella and chickenpox
@@ -97,7 +97,7 @@ The vaccines against these diseases are live-attenuated vaccines and are not giv
                 <TextView
                     android:id="@+id/part4"
                     android:layout_width="wrap_content"
-                    android:layout_height="436dp"
+                    android:layout_height="376dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
                     android:text="There are health risks to the woman and the fetus if the woman becomes infected during these illnesses:

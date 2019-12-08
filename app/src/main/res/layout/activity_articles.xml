@@ -10,12 +10,13 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="160dp"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_gravity="right|top"
         android:layout_marginTop="20dp"
+        android:background="#00D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
 
     <EditText
@@ -31,7 +32,7 @@
         android:shadowColor="#D2F8EF"
         android:textColorHighlight="#FFEBCD"
         android:textColorHint="#202020"
-        android:layout_marginTop="10dp"
+
         android:textSize="20dp"
         android:textStyle="bold" />
 

@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class homePage extends AppCompatActivity {
 
@@ -15,6 +16,7 @@ public class homePage extends AppCompatActivity {
     private Button pregnancyCalButton;
     private Button qaButton;
     private Button articlesButton;
+    private Button logOutButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -27,6 +29,7 @@ public class homePage extends AppCompatActivity {
         pregnancyCalButton = (Button) findViewById(R.id.calender);
         qaButton = (Button) findViewById(R.id.QA);
         articlesButton = (Button) findViewById(R.id.article);
+        logOutButton = (Button) findViewById(R.id.log_out);
 
         //handle the personalAreaButton
         personalAreaButton.setOnClickListener(new View.OnClickListener() {
@@ -110,6 +113,12 @@ public class homePage extends AppCompatActivity {
     //use fun to move on to articles page
     public void openArticlesPage() {
         Intent in = new Intent(this, articles.class);
+        startActivity(in);
+    }
+
+    //use fun to logout
+    public void logoutFun() {
+        Intent in = new Intent(this, MainActivity.class);
         startActivity(in);
     }
 

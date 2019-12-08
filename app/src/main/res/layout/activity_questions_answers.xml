@@ -10,10 +10,11 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="160dp"
-        android:layout_height="80dp"
+        android:background="#00D2F8EF"
+        android:layout_height="100dp"
         android:layout_gravity="right|top"
         android:layout_marginTop="20dp"
         app:srcCompat="@drawable/mini_logo" />
@@ -24,7 +25,7 @@
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginHorizontal="100px"
-        android:layout_marginTop="10dp"
+
         android:background="#00D2F8EF "
         android:drawableStart="@drawable/qaicon"
         android:hint="  Questions and answers"

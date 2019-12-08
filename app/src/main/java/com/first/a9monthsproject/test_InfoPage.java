@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class test_InfoPage extends AppCompatActivity {
 
@@ -13,6 +14,7 @@ public class test_InfoPage extends AppCompatActivity {
     private Button firstBuuton;
     private Button secondBuuton;
     private Button thirdBuuton;
+    private ImageButton logoButton;
 
 
     @Override
@@ -24,6 +26,7 @@ public class test_InfoPage extends AppCompatActivity {
         firstBuuton =(Button) findViewById(R.id.firsttrimester);
         secondBuuton =(Button) findViewById(R.id.sectrimester);
         thirdBuuton =(Button) findViewById(R.id.thiredtrimester);
+        logoButton=(ImageButton) findViewById(R.id.Image_Logo);
 
 
         //move to tests list - pre pregnancy
@@ -58,6 +61,14 @@ public class test_InfoPage extends AppCompatActivity {
                 openfThirdTrimsterPage();
             }
         });
+
+        //move to home page when we push on the logo 
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
     }
 
     //use fun to move on to pre pregnancy tests page
@@ -81,6 +92,12 @@ public class test_InfoPage extends AppCompatActivity {
     //use fun to move on to third trimester tests page
     public void openfThirdTrimsterPage() {
         Intent in = new Intent(this, triedTrimesterTests.class);
+        startActivity(in);
+    }
+
+    //use fun to move on to home page
+    public void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
 }

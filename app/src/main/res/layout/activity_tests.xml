@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="160dp"
         android:layout_height="100dp"

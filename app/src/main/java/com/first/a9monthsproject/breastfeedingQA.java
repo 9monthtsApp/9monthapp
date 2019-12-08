@@ -8,17 +8,18 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class notritonAndSportQA extends AppCompatActivity {
+public class breastfeedingQA extends AppCompatActivity {
 
     private Button returnButton;
     private ImageButton logoButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_notriton_and_sport_q);
+        setContentView(R.layout.activity_breastfeeding_q);
 
-        returnButton=(Button)findViewById(R.id.goback);
+        returnButton= (Button) findViewById(R.id.goback);
         logoButton=(ImageButton) findViewById(R.id.Image_Logo);
 
         returnButton.setOnClickListener(new View.OnClickListener() {
@@ -43,10 +44,9 @@ public class notritonAndSportQA extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to move on to Homepage page
+    //use fun to move on to home page
     public void openHomePage() {
         Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
-
 }
