@@ -14,7 +14,7 @@ public class vaccinationArticle2 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccination_article2);
-        returnButton =(Button) findViewById(R.id.gobackToArticlesNut);
+        returnButton =(Button) findViewById(R.id.testList);
         returnMainArtical = (Button) findViewById(R.id.returnMainArticles);
 
 

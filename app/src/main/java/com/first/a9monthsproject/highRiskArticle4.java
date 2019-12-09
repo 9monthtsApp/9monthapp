@@ -14,7 +14,7 @@ public class highRiskArticle4 extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_high_risk_article4);
-        returnButton =(Button) findViewById(R.id.gobackToArticlesNut);
+        returnButton =(Button) findViewById(R.id.testList);
         returnMainArtical = (Button) findViewById(R.id.returnMainArticles);
 
 

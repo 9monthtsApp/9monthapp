@@ -154,7 +154,7 @@ The activity should be stopped in a state of fatigue, accelerated pulse or diffi
 
 
                 <Button
-                    android:id="@+id/gobackToArticlesNut"
+                    android:id="@+id/testList"
                     android:layout_width="330dp"
                     android:layout_marginTop="15dp"
                     android:layout_height="wrap_content"

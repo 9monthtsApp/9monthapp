@@ -2,7 +2,9 @@ package com.first.a9monthsproject;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
@@ -10,7 +12,7 @@ public class personalArea extends AppCompatActivity {
 
     private Button presonalButton;
     private Button myRecommendationButton;
-    private Button passButton;
+    private Button picButton;
     private ImageButton gobackButton;
 
 
@@ -21,9 +23,23 @@ public class personalArea extends AppCompatActivity {
 
         presonalButton = (Button) findViewById(R.id.WatchPersonalInfo);
         myRecommendationButton=(Button) findViewById(R.id.personal_area);
-        passButton = (Button) findViewById(R.id.Watchrecommendation);
+        picButton = (Button) findViewById(R.id.Watchrecommendation);
         gobackButton = (ImageButton) findViewById(R.id.go_back);
+
+        gobackButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
         
     }
+
+    private void openHomePage() {
+
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
+    }
+
 }

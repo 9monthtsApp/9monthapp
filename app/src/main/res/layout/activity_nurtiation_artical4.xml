@@ -170,7 +170,7 @@ To reduce the use of salt or monosodium glutamate, it is recommended to use herb
 
 
                 <Button
-                    android:id="@+id/gobackToArticlesNut"
+                    android:id="@+id/testList"
                     android:layout_width="330dp"
                     android:layout_marginTop="15dp"
                     android:layout_height="wrap_content"

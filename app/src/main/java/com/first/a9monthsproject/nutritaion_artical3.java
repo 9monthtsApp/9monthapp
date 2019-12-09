@@ -17,7 +17,7 @@ public class nutritaion_artical3 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nutritaion_artical3);
 
-        returnButton = (Button) findViewById(R.id.gobackToArticlesNut);
+        returnButton = (Button) findViewById(R.id.testList);
         returnMainArtical = (Button) findViewById(R.id.returnMainArticles);
 
         returnButton.setOnClickListener(new View.OnClickListener() {

@@ -118,7 +118,7 @@ A pregnant woman who is vaccinated against the flu during pregnancy vaccines not
 
 
                 <Button
-                    android:id="@+id/gobackToArticlesNut"
+                    android:id="@+id/testList"
                     android:layout_width="330dp"
                     android:layout_marginTop="15dp"
                     android:layout_height="wrap_content"

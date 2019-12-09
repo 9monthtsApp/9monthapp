@@ -17,7 +17,7 @@ public class nurtiationArtical4 extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_nurtiation_artical4);
 
-        returnButton =(Button) findViewById(R.id.gobackToArticlesNut);
+        returnButton =(Button) findViewById(R.id.testList);
         returnMainArtical = (Button) findViewById(R.id.returnMainArticles);
 
         returnButton.setOnClickListener(new View.OnClickListener() {

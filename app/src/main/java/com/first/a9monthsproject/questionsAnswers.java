@@ -17,7 +17,7 @@ public class questionsAnswers extends AppCompatActivity {
     private Button birthButton;
     private Button babyAndAfterButton;
     private ImageButton returnButton;
-    private ImageButton logoButton;
+
 
 
     @Override
@@ -32,7 +32,7 @@ public class questionsAnswers extends AppCompatActivity {
         babyAndAfterButton =(Button) findViewById(R.id.afterBirth);
         breastButton = (Button) findViewById(R.id.breastFeeding);
         returnButton = (ImageButton) findViewById(R.id.go_back);
-        logoButton =(ImageButton) findViewById(R.id.Image_Logo);
+
 
 
         //handle nutrition button -> move to nutrition and sport QA
@@ -73,16 +73,23 @@ public class questionsAnswers extends AppCompatActivity {
             }
         });
 
-        //move to home page when we push on the logo
-        logoButton.setOnClickListener(new View.OnClickListener() {
+        birthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openHomePage();
+                openBirthQA();
             }
         });
 
 
 
+
+
+    }
+
+    //use fun to move on to birth QA page
+    private void openBirthQA() {
+        Intent in = new Intent(this, birthQA.class);
+        startActivity(in);
     }
 
 
@@ -92,7 +99,6 @@ public class questionsAnswers extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to move on to breastfeeding QA page
     public void openNutriationQA() {
         Intent in = new Intent(this, notritonAndSportQA.class);
         startActivity(in);

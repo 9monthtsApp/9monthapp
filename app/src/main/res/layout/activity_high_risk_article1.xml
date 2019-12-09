@@ -130,7 +130,7 @@ It is important to be aware of signs that require consultation with the medical 
 
 
                 <Button
-                    android:id="@+id/gobackToArticlesNut"
+                    android:id="@+id/testList"
                     android:layout_width="330dp"
                     android:layout_marginTop="15dp"
                     android:layout_height="wrap_content"
