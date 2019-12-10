@@ -12,6 +12,7 @@ public class triedTrimesterTests extends AppCompatActivity {
 
     private Button returnMainTests;
     private Button returnTestslist;
+    private ImageButton logoButton;
 
 
     @Override
@@ -21,7 +22,14 @@ public class triedTrimesterTests extends AppCompatActivity {
 
         returnMainTests = (Button) findViewById(R.id.returnMainArticles);
         returnTestslist =(Button) findViewById(R.id.testList);
+        logoButton =(ImageButton) findViewById(R.id.Image_Logo);
 
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
         returnTestslist.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -32,14 +40,20 @@ public class triedTrimesterTests extends AppCompatActivity {
         returnMainTests.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                opemTestsPage();
+                openTestsPage();
             }
         });
     }
 
     //open the main tests page
-    private void opemTestsPage() {
+    private void openTestsPage() {
         Intent in = new Intent(this, tests.class);
+        startActivity(in);
+    }
+
+    //open the home page
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
 

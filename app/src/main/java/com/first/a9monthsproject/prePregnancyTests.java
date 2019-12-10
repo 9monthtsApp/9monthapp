@@ -6,11 +6,13 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class prePregnancyTests extends AppCompatActivity {
 
     private Button returnMainTests;
     private Button returnTestslist;
+    private ImageButton logoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -19,6 +21,14 @@ public class prePregnancyTests extends AppCompatActivity {
 
         returnMainTests = (Button) findViewById(R.id.returnMainTests);
         returnTestslist =(Button) findViewById(R.id.gobackToListOfTests);
+        logoButton =(ImageButton) findViewById(R.id.Image_Logo);
+
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
         returnTestslist.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -33,6 +43,11 @@ public class prePregnancyTests extends AppCompatActivity {
                 opemTestsPage();
             }
         });
+    }
+
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
     }
 
     //open the main tests page

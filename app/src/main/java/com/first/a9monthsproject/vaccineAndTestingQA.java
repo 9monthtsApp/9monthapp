@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 public class vaccineAndTestingQA extends AppCompatActivity {
 
     private Button returnButton;
-   // private ImageButton logoButton;
+   private ImageButton logoButton;
 
 
     @Override
@@ -20,7 +20,7 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         setContentView(R.layout.activity_vaccine_and_testing_q);
 
         returnButton= (Button) findViewById(R.id.goback);
-       // logoButton=(ImageButton) findViewById(R.id.Image_Logo);
+       logoButton=(ImageButton) findViewById(R.id.Image_Logo);
 
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -30,12 +30,12 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         });
 
         //move to home page when we push on the logo
-       /* logoButton.setOnClickListener(new View.OnClickListener() {
+       logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomePage();
             }
-        });*/
+        });
     }
 
     //use fun to move on to main QA page

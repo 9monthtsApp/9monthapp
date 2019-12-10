@@ -13,7 +13,7 @@ public class personalArea extends AppCompatActivity {
     private Button presonalButton;
     private Button myRecommendationButton;
     private Button picButton;
-    private ImageButton gobackButton;
+
 
 
     @Override
@@ -24,22 +24,10 @@ public class personalArea extends AppCompatActivity {
         presonalButton = (Button) findViewById(R.id.WatchPersonalInfo);
         myRecommendationButton=(Button) findViewById(R.id.personal_area);
         picButton = (Button) findViewById(R.id.Watchrecommendation);
-        gobackButton = (ImageButton) findViewById(R.id.go_back);
 
-        gobackButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
 
         
     }
 
-    private void openHomePage() {
-
-        Intent in = new Intent(this, homePage.class);
-        startActivity(in);
-    }
 
 }

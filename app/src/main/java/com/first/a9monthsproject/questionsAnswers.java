@@ -11,12 +11,12 @@ import android.widget.ImageButton;
 public class questionsAnswers extends AppCompatActivity {
 
     private Button nutritionButton;
-    private Button VaccomationButton;
+    private Button VaccimationButton;
     private Button breastButton;
     private Button rightsButton;
     private Button birthButton;
     private Button babyAndAfterButton;
-    private ImageButton returnButton;
+
 
 
 
@@ -26,12 +26,12 @@ public class questionsAnswers extends AppCompatActivity {
         setContentView(R.layout.activity_questions_answers);
 
         nutritionButton =(Button) findViewById(R.id.nutrition);
-        VaccomationButton=(Button) findViewById(R.id.VaccinesAndTests);
+        VaccimationButton=(Button) findViewById(R.id.VaccinesAndTests);
         rightsButton = (Button) findViewById(R.id.Pregnantrights);
         birthButton =(Button) findViewById(R.id.birth);
         babyAndAfterButton =(Button) findViewById(R.id.afterBirth);
         breastButton = (Button) findViewById(R.id.breastFeeding);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
 
 
 
@@ -43,7 +43,8 @@ public class questionsAnswers extends AppCompatActivity {
             }
         });
 
-        VaccomationButton.setOnClickListener(new View.OnClickListener() {
+        ////handle nutrition button -> move to vaciomation QA
+        VaccimationButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openVaccineAndTestQAPage();
@@ -58,21 +59,15 @@ public class questionsAnswers extends AppCompatActivity {
             }
         });
 
-        rightsButton.setOnClickListener(new View.OnClickListener() {
+        // move to after birth QA page
+        babyAndAfterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openPregnantRightsPage();
+                openAfterBirthPage();
             }
         });
 
-        //handle return button
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
-
+        // move to birth QA page
         birthButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -80,10 +75,23 @@ public class questionsAnswers extends AppCompatActivity {
             }
         });
 
+        // move to rights QA page
+        rightsButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPregnantRightsPage();
+            }
+        });
 
 
 
 
+    }
+
+    //move to after birth QA page
+    private void openAfterBirthPage() {
+        Intent in = new Intent(this, afterBirthQA.class);
+        startActivity(in);
     }
 
     //use fun to move on to birth QA page
@@ -92,19 +100,13 @@ public class questionsAnswers extends AppCompatActivity {
         startActivity(in);
     }
 
-
-    //use fun to move on to home page
-    public void openHomePage() {
-        Intent in = new Intent(this, homePage.class);
-        startActivity(in);
-    }
-
+    //use fun to move to nutrition and sport QA page
     public void openNutriationQA() {
         Intent in = new Intent(this, notritonAndSportQA.class);
         startActivity(in);
     }
 
-    //use fun to move to nutrition and sport QA page
+    //use fun to move to breastfeeding QA page
     public void openBreastfeddingQA() {
         Intent in = new Intent(this, breastfeedingQA.class);
         startActivity(in);
@@ -119,6 +121,12 @@ public class questionsAnswers extends AppCompatActivity {
     //use fun to move to vaccines and tests QA page
     public void openVaccineAndTestQAPage() {
         Intent in = new Intent(this, vaccineAndTestingQA.class);
+        startActivity(in);
+    }
+
+    //use fun to move on to home page
+    public void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
 

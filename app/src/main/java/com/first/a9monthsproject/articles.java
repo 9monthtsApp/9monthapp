@@ -12,7 +12,7 @@ public class articles extends AppCompatActivity {
 
     private Button nutritionButton;
     private Button sportButton;
-    private ImageButton returnButton;
+
 
     private Button vaccinationsButton;
     private Button riskButton;
@@ -25,7 +25,7 @@ public class articles extends AppCompatActivity {
 
         nutritionButton = (Button) findViewById(R.id.nutrition);
         sportButton = (Button) findViewById(R.id.sport);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
         vaccinationsButton = (Button) findViewById(R.id.vaccinations);
         riskButton = (Button) findViewById(R.id.risk);
 
@@ -39,20 +39,7 @@ public class articles extends AppCompatActivity {
         });
 
         // handle the sport Button - move to sport articles
-        sportButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openSportArticles();
-            }
-        });
 
-        // handle the return Button - move to home page
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
 
         // handle the vaccinations Button - move to vaccinations articles
         vaccinationsButton.setOnClickListener(new View.OnClickListener() {
