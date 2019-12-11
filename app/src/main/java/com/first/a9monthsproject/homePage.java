@@ -78,14 +78,18 @@ public class homePage extends AppCompatActivity {
             }
         });
 
-    /*    logOutButton.setOnClickListener(new View.OnClickListener() {
+    logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 logoutFun();
             }
-        });*/
+        });
     }
 
+    private void logoutFun(){
+        Intent in = new Intent(this, MainActivity.class);
+        startActivity(in);
+    }
     //use fun to move on to personal area page
     public void openPersonalAreaPage() {
         Intent in = new Intent(this, personalArea.class);

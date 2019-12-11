@@ -48,7 +48,7 @@ public class secTrimsterTests extends AppCompatActivity {
 
     //open the main openHomePage()
     private void openHomePage(){
-        Intent in = new Intent(this, tests.class);
+        Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
 

@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.media.Image;
+import android.net.wifi.hotspot2.pps.HomeSp;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -48,7 +49,7 @@ public class firstTrimester extends AppCompatActivity {
 
     //open the main openHomePage()
     private void openHomePage(){
-        Intent in = new Intent(this, tests.class);
+        Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
 

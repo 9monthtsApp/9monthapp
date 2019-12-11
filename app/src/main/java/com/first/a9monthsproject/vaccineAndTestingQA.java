@@ -49,4 +49,53 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
+
+    public static class postImageBlog {
+        public String title;
+        public String image;
+        public String timestamp;
+        public String userid;
+
+    public postImageBlog(String title1, String image1 , String time1, String userid1){
+        this.title =title1;
+        this.image=image1;
+        this.timestamp =time1;
+        this.userid =userid1;
+    }
+
+    public String getTitle(){
+        return title;
+        }
+
+
+        public String getTimestamp(){
+            return timestamp;
+        }
+
+
+        public String getImage(){
+            return image;
+        }
+
+        public String getUserid(){
+             return userid;
+        }
+
+        public void setTitle(String temp){
+            title =temp;
+        }
+
+        public void setImage(String temp){
+            image =temp;
+        }
+
+        public void setTimestamp(String temp){
+            timestamp =temp;
+        }
+
+        public void setUserid(String temp){
+            userid =temp;
+        }
+
+    }
 }

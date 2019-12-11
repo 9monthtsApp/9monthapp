@@ -23,10 +23,22 @@ public class personalArea extends AppCompatActivity {
 
         presonalButton = (Button) findViewById(R.id.WatchPersonalInfo);
         myRecommendationButton=(Button) findViewById(R.id.personal_area);
-        picButton = (Button) findViewById(R.id.Watchrecommendation);
+        picButton = (Button) findViewById(R.id.photoAlbum);
+
+        picButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openAlbumPage();
+            }
+        });
 
 
         
+    }
+
+    private void openAlbumPage() {
+        Intent in = new Intent(this, addImageToAlbum.class);
+        startActivity(in);
     }
 
 
