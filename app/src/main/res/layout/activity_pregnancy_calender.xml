@@ -65,7 +65,7 @@
             android:layout_marginHorizontal="100px"
             android:background="#00ffffff"
 
-            android:hint="inforation bla bla bla"
+            android:hint="Loading data"
             android:shadowColor="#00ffffff"
             android:textColorHint="#575555"
             android:textSize="20dp"

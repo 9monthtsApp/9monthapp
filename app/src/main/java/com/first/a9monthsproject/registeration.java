@@ -1,9 +1,5 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.app.AlertDialog;
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,6 +9,8 @@ import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.ProgressBar;
 import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.AuthResult;
@@ -83,7 +81,7 @@ public class registeration extends AppCompatActivity {
 
 
         if(!TextUtils.isEmpty(fname) && !TextUtils.isEmpty(lname)&& !TextUtils.isEmpty(tmpEmail)
-        && !TextUtils.isEmpty(tmpWeeks) && !TextUtils.isEmpty(pass1)){
+                && !TextUtils.isEmpty(tmpWeeks) && !TextUtils.isEmpty(pass1)){
 
             Toast.makeText(registeration.this ,"creating account", Toast.LENGTH_LONG).show();
             mProgressDialog.isShown();
@@ -95,11 +93,11 @@ public class registeration extends AppCompatActivity {
                         String userId = mAuth.getCurrentUser().getUid();
                         // when we create a user we create a user id that we can add information to this user
                         DatabaseReference currentUserDB = mDatabaseReference.child(userId);
-                        currentUserDB.child("First name: ").setValue(fname);
-                        currentUserDB.child("Last name: ").setValue(lname);
-                        currentUserDB.child("Email: ").setValue(tmpEmail);
-                        currentUserDB.child("pregnancy week: ").setValue(tmpWeeks);
-                        currentUserDB.child("Password: ").setValue(pass1);
+                        currentUserDB.child("First_name").setValue(fname);
+                        currentUserDB.child("Last_name").setValue(lname);
+                        currentUserDB.child("Email").setValue(tmpEmail);
+                        currentUserDB.child("Pregnancy_week").setValue(tmpWeeks);
+                        currentUserDB.child("Password").setValue(pass1);
                         currentUserDB.child("Image").setValue("none");
 
                         openHomePage();
@@ -107,11 +105,11 @@ public class registeration extends AppCompatActivity {
 
                     }
 
-                    }
+                }
 
             });
         }}
-    
+
 
     // use the fun to move on to home page
     public void openHomePage() {

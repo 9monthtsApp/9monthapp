@@ -105,16 +105,16 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/fetus"
+            android:id="@+id/avoid"
             android:layout_width="300dp"
-            android:layout_marginTop="240dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
+            android:layout_marginTop="240dp"
             android:background="#80FFE4F1"
             android:drawableStart="@drawable/birth"
-            android:hint="Learning about the fetus"
+            android:hint="Things to avoid during pregnancy"
+            android:textColorHint="#FFFFFF"
             android:textSize="20dp"
             android:textStyle="bold" />
 

@@ -9,7 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".addImageToAlbum"></activity>
+        <activity android:name=".thingsToAvoidArticle3"></activity>
+        <activity android:name=".thingsToAvoidArticle2" />
+        <activity android:name=".thingsToAvoidArticle1" />
+        <activity android:name=".thingsToAvoidArticles" />
+        <activity android:name=".addImageToAlbum" />
         <activity android:name=".afterBirthQA" />
         <activity android:name=".birthQA" />
         <activity android:name=".highRiskArticle4" />

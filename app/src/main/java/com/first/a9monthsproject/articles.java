@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,11 +11,9 @@ public class articles extends AppCompatActivity {
 
     private Button nutritionButton;
     private Button sportButton;
-
-
     private Button vaccinationsButton;
     private Button riskButton;
-
+    private Button avoidButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -25,7 +22,7 @@ public class articles extends AppCompatActivity {
 
         nutritionButton = (Button) findViewById(R.id.nutrition);
         sportButton = (Button) findViewById(R.id.sport);
-
+        avoidButton = (Button) findViewById(R.id.avoid);
         vaccinationsButton = (Button) findViewById(R.id.vaccinations);
         riskButton = (Button) findViewById(R.id.risk);
 
@@ -39,7 +36,12 @@ public class articles extends AppCompatActivity {
         });
 
         // handle the sport Button - move to sport articles
-
+        sportButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSportArticle();
+            }
+        });
 
         // handle the vaccinations Button - move to vaccinations articles
         vaccinationsButton.setOnClickListener(new View.OnClickListener() {
@@ -57,12 +59,27 @@ public class articles extends AppCompatActivity {
             }
         });
 
+
+        // handle the nutrition Button - move to tings to avoid articles
+        avoidButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openThingsToAvoid();
+            }
+        });
+
     }
 
 
     //use fun to move on to notrition articles page
     public void openNutritionDietArticles() {
         Intent in = new Intent(this, nutritonAndDietArticals.class);
+        startActivity(in);
+    }
+
+    //use fun to move on to vaccinations articles page
+    public void openSportArticle() {
+        Intent in = new Intent(this, sportsArticles .class);
         startActivity(in);
     }
 
@@ -84,9 +101,15 @@ public class articles extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to move on to vaccinations articles page
+    //use fun to move on to high risk pregnancy articles page
     public void openRiskArticle() {
         Intent in = new Intent(this, highRiskArticles .class);
+        startActivity(in);
+    }
+
+    //use fun to move on to things to avoid articles page
+    public void openThingsToAvoid() {
+        Intent in = new Intent(this, thingsToAvoidArticles .class);
         startActivity(in);
     }
 }
