@@ -1,11 +1,6 @@
 package com.first.a9monthsproject;
 
-import androidx.annotation.Nullable;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.TextUtils;
@@ -13,18 +8,16 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
-import android.widget.ImageView;
 import android.widget.Toast;
+
+import androidx.annotation.Nullable;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
-
-import java.io.FileNotFoundException;
-import java.io.InputStream;
-import java.net.URI;
 
 public class addImageToAlbum extends AppCompatActivity {
     private ImageButton uploadImageButton;
@@ -49,7 +42,7 @@ public class addImageToAlbum extends AppCompatActivity {
         mPostDatabase = FirebaseDatabase.getInstance().getReference().child("MBlog");
         uploadImageButton = (ImageButton)findViewById(R.id.enterPic);
         addTitle = (EditText) findViewById(R.id.entertitle);
-        addImageButton = (Button) findViewById(R.id.addImage);
+       // addImageButton = (Button) findViewById(R.id.addImage);
      //   image=(ImageView) findViewById(R.id.image_view);
 
         addImageButton.setOnClickListener(new View.OnClickListener() {
