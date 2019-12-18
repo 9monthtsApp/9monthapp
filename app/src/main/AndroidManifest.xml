@@ -2,6 +2,8 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.first.a9monthsproject">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -9,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".thingsToAvoidArticle3"></activity>
+        <activity android:name=".imagesAlbum" />
+        <activity android:name=".thingsToAvoidArticle3" />
         <activity android:name=".thingsToAvoidArticle2" />
         <activity android:name=".thingsToAvoidArticle1" />
         <activity android:name=".thingsToAvoidArticles" />

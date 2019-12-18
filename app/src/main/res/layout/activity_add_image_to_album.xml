@@ -23,60 +23,68 @@
 
     <FrameLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_marginTop="40dp">
 
-
-        <ImageButton
-            android:id="@+id/enterPic"
-            android:layout_width="300dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="55dp"
-            android:drawableStart="@drawable/circleicon"
-            android:hint="click to upload Image"
-            android:inputType="text"
-            android:textAlignment="center"
-            android:textColorHint="#000000"
-            android:visibility="visible"
-
-            />
-
-
-            />
-
-
-        <EditText
-            android:id="@+id/entertitle"
-            android:layout_width="300dp"
+        <Button
+            android:id="@+id/chooseImage"
+            android:layout_width="250dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="100px"
-            android:layout_marginTop="220dp"
-            android:hint="Enter title"
-            android:inputType="text"
-            android:textColorHighlight="#673AB7"
-            android:textColorHint="#202020" />
+            android:layout_marginTop="20dp"
+            android:background="#80ffb3b3"
+            android:hint="Choose image"
+            android:textSize="20dp"
+            app:srcCompat="@drawable/addtest" />
+
+        <EditText
+            android:id="@+id/addTitle_editText"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="100dp"
+            android:hint="add title" />
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="150dp"
+            android:layout_height="100dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="160dp" />
+
+        <ProgressBar
+            android:id="@+id/buttonUploadProgres"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="270dp" />
+
+        <Button
+            android:id="@+id/uploadImage"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="300dp"
+            android:background="#80ffb3b3"
+            android:hint="Upload image"
+            android:textSize="20dp"
+            app:srcCompat="@drawable/addtest" />
 
 
+        <TextView
+            android:id="@+id/showUploads"
+            android:layout_width="250dp"
+            android:layout_height="50dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="350dp"
+            android:text="show uploads"
+            android:textAlignment="center" />
 
-            <LinearLayout
-                android:layout_width="130dp"
-                android:layout_height="match_parent"
-    android:orientation="horizontal"></LinearLayout>
 
-            <Button
-                android:id="@+id/addImage"
-                android:layout_width="180dp"
-                android:layout_height="50dp"
-                android:layout_marginTop="320dp"
-                android:layout_gravity="center_horizontal"
-                android:layout_marginRight="10dp"
-                android:textColorHint="#000000"
-                android:background="#80ffb3b3"
-                android:hint=" psot the image"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                />
+        <LinearLayout
+            android:layout_width="130dp"
+            android:layout_height="match_parent"
+            android:orientation="horizontal"></LinearLayout>
 
 
     </FrameLayout>
