@@ -2,10 +2,26 @@ package com.first.a9monthsproject;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.concurrent.TimeUnit;
 
 public class homePage extends AppCompatActivity {
 
@@ -16,6 +32,13 @@ public class homePage extends AppCompatActivity {
     private Button qaButton;
     private Button articlesButton;
     private Button logOutButton;
+
+    private DatabaseReference mDb;
+    private FirebaseAuth firebaseAuth;
+    private FirebaseDatabase mDatabase;
+
+    private static final String TAG = "MainActivity";
+    public String userId;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,6 +52,28 @@ public class homePage extends AppCompatActivity {
         qaButton = (Button) findViewById(R.id.QA);
         articlesButton = (Button) findViewById(R.id.article);
         logOutButton = (Button) findViewById(R.id.log_out);
+
+        firebaseAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
+        mDb = mDatabase.getReference();
+        FirebaseUser user = firebaseAuth.getCurrentUser();
+        String userKey = user.getUid();
+
+
+        mDb.child("MUsers").child(userKey).child("First_name").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot dataSnapshot) {
+                userId = dataSnapshot.getValue(String.class);
+                Log.d(TAG, "welcome: " + userId);
+                Toast.makeText(homePage.this, "welcome " + userId , Toast.LENGTH_LONG).show();
+
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {}
+        });
+
+
 
         //handle the personalAreaButton
         personalAreaButton.setOnClickListener(new View.OnClickListener() {
@@ -85,6 +130,8 @@ public class homePage extends AppCompatActivity {
             }
         });
     }
+
+
 
     private void logoutFun(){
         Intent in = new Intent(this, MainActivity.class);

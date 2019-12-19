@@ -94,7 +94,7 @@ public class MainActivity extends AppCompatActivity {
                         //check connection of the user to the database
                       if (task.isSuccessful()){
                        //we are in
-                       Toast.makeText(MainActivity.this , "Singed in 2!!!!", Toast.LENGTH_LONG).show();
+                       Toast.makeText(MainActivity.this , "", Toast.LENGTH_LONG).show();
                        openHomePage();
                       }else{
                           // not singed in

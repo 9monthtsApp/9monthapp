@@ -11,6 +11,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".hoosingOptionImageAlbum"></activity>
         <activity android:name=".imagesAlbum" />
         <activity android:name=".thingsToAvoidArticle3" />
         <activity android:name=".thingsToAvoidArticle2" />

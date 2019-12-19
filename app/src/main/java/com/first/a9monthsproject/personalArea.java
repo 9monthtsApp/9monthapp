@@ -37,7 +37,7 @@ public class personalArea extends AppCompatActivity {
     }
 
     private void openAlbumPage() {
-        Intent in = new Intent(this, addImageToAlbum.class);
+        Intent in = new Intent(this, hoosingOptionImageAlbum.class);
         startActivity(in);
     }
 
