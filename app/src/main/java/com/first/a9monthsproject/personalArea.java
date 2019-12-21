@@ -12,6 +12,7 @@ public class personalArea extends AppCompatActivity {
 
     private Button presonalButton;
     private Button myRecommendationButton;
+    private Button fetusSize;
     private Button picButton;
 
 
@@ -24,6 +25,7 @@ public class personalArea extends AppCompatActivity {
         presonalButton = (Button) findViewById(R.id.WatchPersonalInfo);
         myRecommendationButton=(Button) findViewById(R.id.personal_area);
         picButton = (Button) findViewById(R.id.photoAlbum);
+        fetusSize =(Button) findViewById(R.id.fruitSize);
 
         picButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,8 +34,17 @@ public class personalArea extends AppCompatActivity {
             }
         });
 
+        fetusSize.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openBabySizePage();
+            }
+        });
+    }
 
-        
+    private void openBabySizePage() {
+        Intent in = new Intent(this, babySizeFruit.class);
+        startActivity(in);
     }
 
     private void openAlbumPage() {

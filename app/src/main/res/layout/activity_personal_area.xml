@@ -41,7 +41,7 @@
         android:layout_width="600px"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="70dp">
+        android:layout_marginTop="50dp">
     </LinearLayout>
 
 
@@ -54,7 +54,7 @@
         <Button
             android:id="@+id/WatchPersonalInfo"
             android:layout_width="300dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:textColorHint="#FFFFFF"
@@ -68,40 +68,45 @@
         <Button
             android:id="@+id/Watchrecommendation"
             android:layout_width="300dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:background="#70FFC7DE"
             android:drawableStart="@drawable/recommm"
             android:textColorHint="#FFFFFF"
             android:hint="Watch my recommendation"
-            android:layout_marginTop="110dp"
+            android:layout_marginTop="100dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/photoAlbum"
             android:layout_width="300dp"
-            android:layout_height="80dp"
+            android:layout_height="70dp"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
-            android:background="#706AE6BD"
+            android:background="#7099ccff"
             android:drawableStart="@drawable/imagealbum"
             android:textColorHint="#FFFFFF"
             android:hint=" My photo album"
-            android:layout_marginTop="220dp"
+            android:layout_marginTop="200dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
+        <Button
+        android:id="@+id/fruitSize"
+        android:layout_width="300dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginHorizontal="100px"
+        android:background="#706AE6BD"
+        android:drawableStart="@drawable/weight"
+        android:textColorHint="#FFFFFF"
+        android:hint=" My fetus size"
+        android:layout_marginTop="300dp"
+        android:textSize="20dp"
+        android:textStyle="bold"/>
 
-        <ImageButton
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
-            android:paddingLeft="30dp"
-            android:background="#00FEFED4"
-            ads:srcCompat="@drawable/goback" />
 
 
     </FrameLayout>
