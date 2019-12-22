@@ -1,13 +1,11 @@
 package com.first.a9monthsproject;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.util.Log;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -21,7 +19,6 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
-import java.util.concurrent.TimeUnit;
 
 public class babySizeFruit extends AppCompatActivity {
 
@@ -182,7 +179,7 @@ public class babySizeFruit extends AppCompatActivity {
                     }
                     if (weeks == 28) {
                         fruitSizeText.setText("You are in week " + weeks + " and your fetus is in a papaya size ");
-                        imageViewFruit.setImageResource(R.drawable.apaya);
+                        imageViewFruit.setImageResource(R.drawable.papaya);
                     }
                     if (weeks == 29) {
                         fruitSizeText.setText("You are in week " + weeks + " and your fetus is in an eggplant size ");

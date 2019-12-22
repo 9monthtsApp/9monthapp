@@ -59,7 +59,6 @@ public class pregnancyCalender extends AppCompatActivity {
                 userId = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Date: " + userId);
                 Toast.makeText(pregnancyCalender.this, "week " + userId , Toast.LENGTH_LONG).show();
-
                 weekinfo=(TextView)findViewById(R.id.Informationaboutweeks);
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
                 try {
