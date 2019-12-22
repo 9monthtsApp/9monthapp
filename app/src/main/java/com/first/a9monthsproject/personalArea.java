@@ -1,12 +1,11 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class personalArea extends AppCompatActivity {
 
@@ -40,6 +39,8 @@ public class personalArea extends AppCompatActivity {
                 openBabySizePage();
             }
         });
+
+
     }
 
     private void openBabySizePage() {
@@ -51,6 +52,7 @@ public class personalArea extends AppCompatActivity {
         Intent in = new Intent(this, hoosingOptionImageAlbum.class);
         startActivity(in);
     }
+
 
 
 }
