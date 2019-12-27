@@ -33,8 +33,8 @@
         android:drawableStart="@drawable/user"
         android:hint="    enter your email"
         android:inputType="textEmailAddress"
-        android:textColorHighlight="#FFDFDD"
-        android:textColorLink="#FFDFDD" />
+        android:textColorHint="#FFFFFF"
+        />
 
     <LinearLayout
         android:layout_width="600px"
@@ -51,6 +51,7 @@
         android:layout_marginHorizontal="100px"
         android:drawableStart="@drawable/key"
         android:hint="    enter password"
+        android:textColorHint="#FFFFFF"
         android:inputType="numberPassword"
         />
 
