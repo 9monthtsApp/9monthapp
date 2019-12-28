@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pregnant8"
+    android:background="@drawable/pregnant9"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -23,8 +23,19 @@
         android:layout_width="600px"
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
-        android:layout_marginTop="65dp">
+        android:layout_marginTop="30dp">
     </LinearLayout>
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:id="@+id/RelativeLayout01"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
 
     <FrameLayout
         android:layout_width="match_parent"
@@ -52,7 +63,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
-            android:background="#80FAD59E"
+            android:background="#80F7BE81"
             android:drawableStart="@drawable/test"
             android:hint="My tests and results"
             android:textSize="20dp"
@@ -67,7 +78,7 @@
             android:layout_gravity="center_horizontal"
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
-            android:background="#80E6BFFF"
+            android:background="#80D0A9F5"
             android:drawableStart="@drawable/recom"
             android:hint="Recommendations"
             android:textSize="20dp"
@@ -102,16 +113,30 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/article"
+        android:id="@+id/article"
+        android:layout_width="300dp"
+        android:layout_marginTop="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textColorHint="#FFFFFF"
+        android:layout_marginHorizontal="100px"
+        android:background="#80A9F5BC"
+        android:drawableStart="@drawable/article"
+        android:hint="Articles and researches"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/deliveryRoom"
             android:layout_width="300dp"
-            android:layout_marginTop="300dp"
+            android:layout_marginTop="360dp"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
-            android:background="#8095EFF0"
-            android:drawableStart="@drawable/article"
-            android:hint="Articles and researches"
+            android:background="#80F5DA81"
+            android:drawableStart="@drawable/fetus"
+            android:hint="Delivery rooms"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -121,7 +146,7 @@
             android:layout_width="40dp"
             android:layout_height="35dp"
             android:layout_marginLeft="20dp"
-            android:layout_marginTop="390dp"
+            android:layout_marginTop="430dp"
             android:background="#00FFDFDD"
             android:drawableStart="@drawable/logout"
             android:shadowColor="#FFDFDD" />
@@ -129,15 +154,8 @@
 
     </FrameLayout>
 
-
-
-
-
-
-
-
-
-
+    </RelativeLayout>
+    </ScrollView>
 
 
 

@@ -40,7 +40,7 @@
             android:layout_gravity="center_horizontal"
             android:background="#70000000"
             android:hint="Manual"
-            android:drawableStart="@drawable/manual"
+            android:drawableStart="@drawable/manual1"
             android:textColorHint="#000000" />
 
 
@@ -53,7 +53,7 @@
     android:layout_gravity="center_horizontal"
             android:background="#70000000"
             android:hint="Scanning results page"
-            android:drawableStart="@drawable/camera"
+            android:drawableStart="@drawable/camera1"
             android:textColorHint="#000000" />
 
 

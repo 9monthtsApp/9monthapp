@@ -32,6 +32,7 @@ public class homePage extends AppCompatActivity {
     private Button qaButton;
     private Button articlesButton;
     private Button logOutButton;
+    private Button deliveryRoomButton;
 
     private DatabaseReference mDb;
     private FirebaseAuth firebaseAuth;
@@ -51,6 +52,7 @@ public class homePage extends AppCompatActivity {
         pregnancyCalButton = (Button) findViewById(R.id.calender);
         qaButton = (Button) findViewById(R.id.QA);
         articlesButton = (Button) findViewById(R.id.article);
+        deliveryRoomButton = (Button) findViewById(R.id.deliveryRoom);
         logOutButton = (Button) findViewById(R.id.log_out);
 
         firebaseAuth = FirebaseAuth.getInstance();
@@ -123,6 +125,13 @@ public class homePage extends AppCompatActivity {
             }
         });
 
+        deliveryRoomButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDeliveryLocation();
+            }
+        });
+
     logOutButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -131,6 +140,10 @@ public class homePage extends AppCompatActivity {
         });
     }
 
+    private void openDeliveryLocation() {
+        Intent in = new Intent(this, deliveryRoomLocation.class);
+        startActivity(in);
+    }
 
 
     private void logoutFun(){

@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".scanResultPage"></activity>
+        <activity android:name=".South"></activity>
+        <activity android:name=".jerusalem" />
+        <activity android:name=".center" />
+        <activity android:name=".northe" />
+        <activity android:name=".deliveryRoomLocation" />
+        <activity android:name=".scanResultPage" />
         <activity android:name=".AddtestsResults" />
         <activity android:name=".TestsResults" />
         <activity android:name=".babySizeFruit" />
@@ -71,6 +76,7 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <meta-data
             android:name="com.google.firebase.ml.vision.DEPENDENCIES"
             android:value="ocr" />
