@@ -40,6 +40,18 @@ public class tests extends AppCompatActivity {
             }
         });
 
+        testResultsBuuton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTestResultPage();
+            }
+        });
+    }
+
+    private void openTestResultPage() {
+
+        Intent in = new Intent(this, TestsResults.class);
+        startActivity(in);
     }
 
     //use fun to move on to information about tests page

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/marbel"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+
+    <ImageButton
+        android:id="@+id/Image_Logo"
+        android:layout_width="140dp"
+        android:layout_height="100dp"
+        android:layout_gravity="right|top"
+        android:layout_marginTop="30dp"
+        android:background="#00000000"
+        android:shadowColor="#D2F8EF"
+        app:srcCompat="@drawable/mini_logo" />
+
+    <TextView
+        android:id="@+id/chooseAddingType"
+        android:layout_width="250dp"
+        android:layout_height="80dp"
+        android:textSize="20dp"
+        android:layout_gravity="center_horizontal"
+        android:textColor="#000000"
+        android:layout_marginTop="30dp"
+        android:text="How do you want to enter the results?"/>
+
+
+
+        <Button
+            android:id="@+id/AddManual"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="30dp"
+            android:layout_gravity="center_horizontal"
+            android:background="#70000000"
+            android:hint="Manual"
+            android:drawableStart="@drawable/manual"
+            android:textColorHint="#000000" />
+
+
+
+        <Button
+            android:id="@+id/AddScanImage"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
+            android:layout_marginTop="20dp"
+    android:layout_gravity="center_horizontal"
+            android:background="#70000000"
+            android:hint="Scanning results page"
+            android:drawableStart="@drawable/camera"
+            android:textColorHint="#000000" />
+
+
+
+</LinearLayout>
