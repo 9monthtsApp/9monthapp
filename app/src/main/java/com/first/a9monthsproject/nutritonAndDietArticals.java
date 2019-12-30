@@ -14,7 +14,7 @@ public class nutritonAndDietArticals extends AppCompatActivity {
     private Button artical2;
     private Button artical3;
     private Button artical4;
-    private ImageButton returnButton;
+
 
 
     @Override
@@ -26,7 +26,7 @@ public class nutritonAndDietArticals extends AppCompatActivity {
         artical2= (Button)findViewById(R.id.Components);
         artical3= (Button)findViewById(R.id.Nutritional_supplements);
         artical4= (Button)findViewById(R.id.Damagingfoods);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
 
 
         artical1.setOnClickListener(new View.OnClickListener() {
@@ -57,12 +57,6 @@ public class nutritonAndDietArticals extends AppCompatActivity {
             }
         });
 
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openArticalsPage();
-            }
-        });
     }
 
 
@@ -91,9 +85,4 @@ public class nutritonAndDietArticals extends AppCompatActivity {
     }
 
 
-    //use fun to move on to articles page
-    public void openArticalsPage() {
-        Intent in = new Intent(this, articles.class);
-        startActivity(in);
-    }
 }

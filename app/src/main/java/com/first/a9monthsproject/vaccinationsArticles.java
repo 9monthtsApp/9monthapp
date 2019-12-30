@@ -11,7 +11,6 @@ import androidx.appcompat.app.AppCompatActivity;
 public class vaccinationsArticles extends AppCompatActivity {
 
 
-    private ImageButton returnButton;
     private Button artical1;
     private Button artical2;
     private Button artical3;
@@ -21,18 +20,12 @@ public class vaccinationsArticles extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccinationsarticles);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
         artical1 = (Button) findViewById(R.id.Before);
         artical2 = (Button) findViewById(R.id.During);
         artical3 = (Button) findViewById(R.id.Flu);
 
 
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openArticalsPage();
-            }
-        });
 
 
         artical1.setOnClickListener(new View.OnClickListener() {

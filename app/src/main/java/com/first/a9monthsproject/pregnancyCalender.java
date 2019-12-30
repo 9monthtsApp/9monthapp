@@ -50,6 +50,7 @@ public class pregnancyCalender extends AppCompatActivity {
         mDb = mDatabase.getReference();
         FirebaseUser user = firebaseAuth.getCurrentUser();
         String userKey = user.getUid();
+
        //Toast.makeText(pregnancyCalender.this, "week" + userKey , Toast.LENGTH_LONG).show();
 
 
@@ -58,7 +59,7 @@ public class pregnancyCalender extends AppCompatActivity {
             public void onDataChange(DataSnapshot dataSnapshot) {
                 userId = dataSnapshot.getValue(String.class);
                 Log.d(TAG, "Date: " + userId);
-                Toast.makeText(pregnancyCalender.this, "week " + userId , Toast.LENGTH_LONG).show();
+               // Toast.makeText(pregnancyCalender.this, "week " + userId , Toast.LENGTH_LONG).show();
                 weekinfo=(TextView)findViewById(R.id.Informationaboutweeks);
                 SimpleDateFormat sdf = new SimpleDateFormat("dd.MM.yyyy");
                 try {

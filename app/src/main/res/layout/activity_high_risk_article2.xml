@@ -10,7 +10,7 @@
     tools:context=".highRiskArticle2">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="140dp"
         android:layout_height="70dp"

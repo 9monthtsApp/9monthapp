@@ -26,6 +26,13 @@ public class personalArea extends AppCompatActivity {
         picButton = (Button) findViewById(R.id.photoAlbum);
         fetusSize =(Button) findViewById(R.id.fruitSize);
 
+        presonalButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openPersonalInfoPage();
+            }
+        });
+
         picButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -41,6 +48,12 @@ public class personalArea extends AppCompatActivity {
         });
 
 
+    }
+
+    private void openPersonalInfoPage() {
+
+        Intent in = new Intent(this, personalInformation.class);
+        startActivity(in);
     }
 
     private void openBabySizePage() {

@@ -10,8 +10,9 @@ import android.widget.ImageButton;
 
 public class vaccineAndTestingQA extends AppCompatActivity {
 
-    private Button returnButton;
+
    private ImageButton logoButton;
+    private Button returnButton;
 
 
     @Override
@@ -19,15 +20,18 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_vaccine_and_testing_q);
 
-        returnButton= (Button) findViewById(R.id.goback);
-       logoButton=(ImageButton) findViewById(R.id.Image_Logo);
 
+       logoButton=(ImageButton) findViewById(R.id.Image_Logo);
+        returnButton =(Button) findViewById(R.id.goback);
+
+        //return to answers and questions page
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                openQApage();
+                openQAlist();
             }
         });
+
 
         //move to home page when we push on the logo
        logoButton.setOnClickListener(new View.OnClickListener() {
@@ -38,11 +42,11 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         });
     }
 
-    //use fun to move on to main QA page
-    public void openQApage() {
+    private void openQAlist() {
         Intent in = new Intent(this, questionsAnswers.class);
         startActivity(in);
     }
+
 
     //use fun to move on to home page
     public void openHomePage() {
@@ -50,52 +54,5 @@ public class vaccineAndTestingQA extends AppCompatActivity {
         startActivity(in);
     }
 
-    public static class postImageBlog {
-        public String title;
-        public String image;
-        public String timestamp;
-        public String userid;
 
-    public postImageBlog(String title1, String image1 , String time1, String userid1){
-        this.title =title1;
-        this.image=image1;
-        this.timestamp =time1;
-        this.userid =userid1;
-    }
-
-    public String getTitle(){
-        return title;
-        }
-
-
-        public String getTimestamp(){
-            return timestamp;
-        }
-
-
-        public String getImage(){
-            return image;
-        }
-
-        public String getUserid(){
-             return userid;
-        }
-
-        public void setTitle(String temp){
-            title =temp;
-        }
-
-        public void setImage(String temp){
-            image =temp;
-        }
-
-        public void setTimestamp(String temp){
-            timestamp =temp;
-        }
-
-        public void setUserid(String temp){
-            userid =temp;
-        }
-
-    }
 }

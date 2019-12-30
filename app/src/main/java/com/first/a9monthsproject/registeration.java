@@ -99,6 +99,7 @@ public class registeration extends AppCompatActivity {
                         currentUserDB.child("Pregnancy_week").setValue(tmpWeeks);
                         currentUserDB.child("Password").setValue(pass1);
                         currentUserDB.child("Image").setValue("none");
+                        currentUserDB.child("Tests_List").setValue("none");
 
                         openHomePage();
 

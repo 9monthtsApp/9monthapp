@@ -10,7 +10,7 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="140dp"
         android:layout_height="100dp"
@@ -259,12 +259,10 @@
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
-
-
                     <Button
                         android:id="@+id/goback"
                         android:layout_width="330dp"
-                        android:layout_marginTop="950dp"
+                        android:layout_marginTop="960dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
                         android:textColorHint="#FFFFFF"
@@ -273,7 +271,6 @@
                         android:hint="Return to QA list"
                         android:textSize="20dp"
                         android:textStyle="bold" />
-
 
 
 

@@ -9,7 +9,7 @@ import android.widget.ImageButton;
 import androidx.appcompat.app.AppCompatActivity;
 
 public class thingsToAvoidArticles extends AppCompatActivity {
-    private ImageButton returnButton;
+
     private Button artical1;
     private Button artical2;
     private Button artical3;
@@ -17,18 +17,13 @@ public class thingsToAvoidArticles extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_things_to_avoid_articles);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
         artical1 = (Button) findViewById(R.id.alcohol);
         artical2 = (Button) findViewById(R.id.smoking);
         artical3 = (Button) findViewById(R.id.drugs);
 
 
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openArticalsPage();
-            }
-        });
+
 
 
         artical1.setOnClickListener(new View.OnClickListener() {
@@ -56,11 +51,6 @@ public class thingsToAvoidArticles extends AppCompatActivity {
     }
 
 
-    //use fun to move on to articles page
-    public void openArticalsPage() {
-        Intent in = new Intent(this, articles.class);
-        startActivity(in);
-    }
 
 
     //use fun to move on to artical_1 page

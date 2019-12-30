@@ -12,7 +12,7 @@ public class sportsArticles extends AppCompatActivity {
 
     private Button artical1;
     private Button artical2;
-    private ImageButton returnButton;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,7 +21,7 @@ public class sportsArticles extends AppCompatActivity {
 
         artical1= (Button)findViewById(R.id.Benefits);
         artical2= (Button)findViewById(R.id.Rules);
-        returnButton = (ImageButton) findViewById(R.id.go_back);
+
 
         artical1.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,12 +37,7 @@ public class sportsArticles extends AppCompatActivity {
             }
         });
 
-        returnButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openArticalsPage();
-            }
-        });
+
     }
 
     //use fun to move on to artical_1 page
@@ -57,11 +52,7 @@ public class sportsArticles extends AppCompatActivity {
         startActivity(in);
     }
 
-    //use fun to move on to articles page
-    public void openArticalsPage() {
-        Intent in = new Intent(this, articles.class);
-        startActivity(in);
-    }
+
 }
 
 

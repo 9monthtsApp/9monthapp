@@ -112,14 +112,7 @@
             android:textSize="18dp"
             android:text="  First Trimester - weeks 1-13,  second Trimester - weeks 14-26,  third trimester - weeks 27-42" />
 
-        <ImageButton
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="330dp"
-            android:paddingLeft="30dp"
-            android:background="#00F0F8FF"
-            ads:srcCompat="@drawable/goback" />
+
 
 
     </FrameLayout>

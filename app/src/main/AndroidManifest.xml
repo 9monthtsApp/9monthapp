@@ -14,7 +14,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".South"></activity>
+        <activity android:name=".MyTestList"></activity>
+        <activity android:name=".South" />
         <activity android:name=".jerusalem" />
         <activity android:name=".center" />
         <activity android:name=".northe" />

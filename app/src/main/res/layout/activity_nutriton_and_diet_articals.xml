@@ -104,17 +104,6 @@ tools:context=".MainActivity">
         android:textStyle="bold" />
 
 
-
-    <ImageButton
-        android:id="@+id/go_back"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="350dp"
-        android:paddingLeft="30dp"
-        android:background="#00000000"
-        ads:srcCompat="@drawable/goback" />
-
-
 </FrameLayout>
 
 

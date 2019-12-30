@@ -108,8 +108,8 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_marginTop="450dp"
+            android:layout_height="80dp"
+            android:layout_marginTop="420dp"
             android:orientation="horizontal">
 
 
@@ -123,7 +123,7 @@
                 ads:srcCompat="@drawable/goback" />
 
             <LinearLayout
-                android:layout_width="130dp"
+                android:layout_width="100dp"
                 android:layout_height="match_parent"
                 android:orientation="horizontal"></LinearLayout>
 
@@ -132,7 +132,7 @@
                 android:layout_width="180dp"
                 android:layout_height="50dp"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginRight="10dp"
+                android:layout_marginRight="50dp"
                 android:textColorHint="#FFFFFF"
                 android:background="#80ffb3b3"
                 android:hint="Create account"

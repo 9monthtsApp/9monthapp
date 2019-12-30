@@ -12,7 +12,7 @@ public class tests extends AppCompatActivity {
 
     private Button testLogButton;
     private Button infoBuuton;
-    private ImageButton logoButton;
+
     private Button testResultsBuuton;
 
     @Override
@@ -23,7 +23,7 @@ public class tests extends AppCompatActivity {
         testLogButton =(Button) findViewById(R.id.Testlog);
         infoBuuton =(Button) findViewById(R.id.Information);
         testResultsBuuton =(Button) findViewById(R.id.Testsresults);
-        logoButton = (ImageButton) findViewById(R.id.Image_Logo);
+
 
         infoBuuton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -32,13 +32,7 @@ public class tests extends AppCompatActivity {
             }
         });
 
-        //move to home page when we push on the logo
-        logoButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                openHomePage();
-            }
-        });
+
 
         testResultsBuuton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -46,6 +40,19 @@ public class tests extends AppCompatActivity {
                 openTestResultPage();
             }
         });
+
+        testLogButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openTestLog();
+            }
+        });
+    }
+
+    private void openTestLog() {
+
+        Intent in = new Intent(this, testLog.class);
+        startActivity(in);
     }
 
     private void openTestResultPage() {
@@ -60,8 +67,5 @@ public class tests extends AppCompatActivity {
         startActivity(in);
     }
 
-    public void openHomePage() {
-        Intent in = new Intent(this, homePage.class);
-        startActivity(in);
-    }
+
 }

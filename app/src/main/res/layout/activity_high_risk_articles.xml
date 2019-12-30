@@ -10,7 +10,7 @@
     tools:context=".highRiskArticles">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="140dp"
         android:layout_height="70dp"
@@ -105,14 +105,6 @@
 
 
 
-        <ImageButton
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="350dp"
-            android:paddingLeft="30dp"
-            android:background="#00000000"
-            ads:srcCompat="@drawable/goback" />
 
 
     </FrameLayout>
