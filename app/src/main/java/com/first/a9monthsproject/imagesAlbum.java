@@ -16,6 +16,8 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
@@ -37,7 +39,7 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
     private FirebaseStorage mStorage;
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBlisnter;
-
+    private FirebaseAuth mAuth;
     private List<UploadImage> mUploads;
 
 
@@ -61,8 +63,13 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
         mAdapter.setOnItemClickListner(imagesAlbum.this);
 
         mStorage = FirebaseStorage.getInstance();
+        mAuth = FirebaseAuth.getInstance();
 
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference("Uploads");
+
+        FirebaseUser user = mAuth.getCurrentUser();
+       String userId = user.getUid();
+
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 
        mDBlisnter= mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
@@ -107,6 +114,7 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
         final String selcetKey = selectItem.getmKey();
 
         StorageReference imageRef = mStorage.getReferenceFromUrl(selectItem.getmImageUrl());
+
         imageRef.delete().addOnSuccessListener(new OnSuccessListener<Void>() {
             @Override
             public void onSuccess(Void aVoid) {

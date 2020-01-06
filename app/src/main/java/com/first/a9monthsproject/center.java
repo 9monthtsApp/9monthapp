@@ -7,6 +7,10 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
+import com.google.firebase.ml.vision.text.FirebaseVisionText;
+
+import java.util.List;
+
 public class center extends AppCompatActivity {
 
     private Button returnButton;
@@ -25,6 +29,8 @@ public class center extends AppCompatActivity {
                 openHomePage();
             }
         });
+
+
     }
 
     private void openHomePage() {

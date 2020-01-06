@@ -98,7 +98,7 @@ public class MainActivity extends AppCompatActivity {
                        openHomePage();
                       }else{
                           // not singed in
-                          Toast.makeText(MainActivity.this, "not singed in 2", Toast.LENGTH_LONG).show();
+                          Toast.makeText(MainActivity.this, "No internet connection", Toast.LENGTH_LONG).show();
                       }
 
                   }

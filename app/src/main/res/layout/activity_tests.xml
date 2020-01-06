@@ -80,7 +80,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/Testsresults"
+            android:id="@+id/AddTestsresults"
             android:layout_width="300dp"
             android:layout_height="80dp"
             android:layout_gravity="center_horizontal"
@@ -88,8 +88,22 @@
             android:background="#60000000"
             android:drawableStart="@drawable/results"
             android:textColorHint="#FFFFFF"
-            android:hint="Tests results"
+            android:hint="Add tests results"
             android:layout_marginTop="220dp"
+            android:textSize="25dp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/WatchTestsresults"
+            android:layout_width="300dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:background="#60000000"
+            android:drawableStart="@drawable/addtest2"
+            android:textColorHint="#FFFFFF"
+            android:hint="Watch tests results"
+            android:layout_marginTop="330dp"
             android:textSize="25dp"
             android:textStyle="bold" />
 

@@ -55,6 +55,7 @@ public class addImageToAlbum extends AppCompatActivity {
 
     private StorageReference mStorageRef;
     private DatabaseReference mDatabaseRef;
+    private FirebaseAuth mAuth;
 
     private StorageTask mUploadTask;
 
@@ -72,9 +73,14 @@ public class addImageToAlbum extends AppCompatActivity {
         myImage =findViewById(R.id.image);
         mProgressBar =findViewById(R.id.buttonUploadProgres);
 
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+       String userId = user.getUid();
+
+
         //save the images in "uploads" folder in pur firebase storage
-        mStorageRef= FirebaseStorage.getInstance().getReference("Uploads");
-        mDatabaseRef =FirebaseDatabase.getInstance().getReference("Uploads");
+        mStorageRef= FirebaseStorage.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
+        mDatabaseRef =FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 
         chooseImageButton.setOnClickListener(new View.OnClickListener() {
             @Override

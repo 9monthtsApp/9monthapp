@@ -1,6 +1,7 @@
 package com.first.a9monthsproject;
 
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.util.Log;
@@ -15,6 +16,10 @@ import com.first.a9monthsproject.GraphicUtils.GraphicOverlay;
 import com.first.a9monthsproject.GraphicUtils.TextGraphic;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.ml.vision.FirebaseVision;
 import com.google.firebase.ml.vision.common.FirebaseVisionImage;
 import com.google.firebase.ml.vision.text.FirebaseVisionText;
@@ -26,7 +31,12 @@ import com.wonderkiln.camerakit.CameraKitImage;
 import com.wonderkiln.camerakit.CameraKitVideo;
 import com.wonderkiln.camerakit.CameraView;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.HashMap;
 import java.util.List;
+import java.util.regex.Pattern;
 
 import static com.google.firebase.ml.vision.text.FirebaseVisionText.Element;
 import static com.google.firebase.ml.vision.text.FirebaseVisionText.Line;
@@ -34,16 +44,40 @@ import static com.google.firebase.ml.vision.text.FirebaseVisionText.Line;
 public class scanResultPage extends AppCompatActivity {
     private CameraView mCameraView;
     private Button mCameraButton;
+    private Button decoding;
     public GraphicOverlay mGraphicOverlay;
     public TextView textView;
+
+    private ArrayList<String> arrayListString;
+    private ArrayList<Double> arrayListDoule;
+    private HashMap<String, Double> hmapResults;
+
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_scan_result_page);
-        mCameraView=(CameraView)findViewById(R.id.camView);
-        mCameraButton=(Button)findViewById(R.id.butt);
-        mGraphicOverlay= (GraphicOverlay)findViewById(R.id.graphicOverlay);
-        textView=(TextView)findViewById(R.id.textView1);
+        mCameraView = (CameraView) findViewById(R.id.camView);
+        mCameraButton = (Button) findViewById(R.id.IdentifyButton);
+        mGraphicOverlay = (GraphicOverlay) findViewById(R.id.graphicOverlay);
+        textView = (TextView) findViewById(R.id.textView1);
+        decoding = (Button) findViewById(R.id.Decipher);
+
+
+        //arrays
+        arrayListString = new ArrayList<String>();
+        arrayListDoule = new ArrayList<Double>();
+        hmapResults = new HashMap<String, Double>();
+
+        //firebase
+        mAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
         mCameraView.addCameraKitListener(new CameraKitEventListener() {
             @Override
@@ -107,6 +141,7 @@ public class scanResultPage extends AppCompatActivity {
                             }
                         });
     }
+
     private void processTextRecognitionResult(FirebaseVisionText texts) {
         List<FirebaseVisionText.TextBlock> blocks = texts.getTextBlocks();
         if (blocks.size() == 0) {
@@ -124,26 +159,68 @@ public class scanResultPage extends AppCompatActivity {
                 for (int k = 0; k < elements.size(); k++) {
 
                     GraphicOverlay.Graphic textGraphic = new TextGraphic(mGraphicOverlay, elements.get(k));
-                    textView.append(" " +elements.get(k).getText());
-                    mGraphicOverlay.add(textGraphic);
 
+                    textView.append(" " + elements.get(k).getText());
+                    mGraphicOverlay.add(textGraphic);
                 }
             }
         }
+
+            String toastText = textView.getText().toString();
+
+        //take the string item and split them
+        //Each cell in the array contains one value that we read - either a test name or its result
+            String[] result = toastText.split(" , \\s*,\\s*");
+
+            final FirebaseUser user = mAuth.getCurrentUser();
+
+             for (String a : result) {
+
+                 //adding the values ​​we read into firebase
+                 databaseReference.child("MUsers").child(user.getUid()).child("Tests_result").push().setValue(a);
+
+             }//end loop on result
+
+
+
+        decoding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDecodingPage();
+            }
+        });
+
+        }
+
+    private void openDecodingPage() {
+        Intent in = new Intent(this, decodingResults.class);
+        startActivity(in);
     }
 
-    @Override
-    public void onResume() {
-        super.onResume();
-        mCameraView.start();
+    public boolean stringContainsNumber( String s )
+    {
+        return Pattern.compile( "[0-9]" ).matcher( s ).find();
     }
 
 
-    @Override
-    public void onPause() {
-        mCameraView.stop();
-        super.onPause();
-    }
+
+        @Override
+        public void onResume () {
+            super.onResume();
+            mCameraView.start();
+        }
+
+
+        @Override
+        public void onPause () {
+            mCameraView.stop();
+            super.onPause();
+        }
+
+
+
 
 
 }
+
+
