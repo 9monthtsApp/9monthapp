@@ -43,10 +43,142 @@
     <ListView
         android:id="@+id/listViewId"
         android:layout_width="350dp"
-        android:layout_height="350dp"
+        android:layout_height="150dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"
         android:textAlignment="center" />
+
+    <ScrollView
+        android:id="@+id/ScrollView01"
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:background="#70ffb3b3"
+        android:layout_height="120dp">
+
+
+        <RelativeLayout
+            android:id="@+id/RelativeLayout01"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+
+
+            <LinearLayout
+                android:id="@+id/LinearLayout01"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="0dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/Glucose"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/WBC"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+                <TextView
+                    android:id="@+id/RBC"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/Hemoglobin"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/Hematocrit"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MCV"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MCH"
+                    android:layout_width="350dp"
+                    android:layout_height="70sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MCHC"
+                    android:layout_width="350dp"
+                    android:layout_height="70sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/RDW"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/Platelets"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MPV"
+                    android:layout_width="350dp"
+                    android:layout_height="60sp"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="20dp"
+                    android:textColor="#000000" />
+
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/seeTestInfo"
+        android:layout_width="300dp"
+        android:layout_height="55dp"
+        android:layout_gravity="center_horizontal"
+        android:textSize="20dp"
+        android:background="#60000000"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textStyle="bold"
+        android:textColor="#FFFFFF"
+        android:text="Click here for a general explanations for each test"
+        android:layout_marginTop="20dp"
+        />
+
 
 
 
