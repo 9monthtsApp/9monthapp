@@ -82,12 +82,37 @@
                     android:textColor="#000000" />
 
                 <TextView
+                    android:id="@+id/Glucose_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+
+                    />
+
+                <TextView
                     android:id="@+id/WBC"
                     android:layout_width="350dp"
                     android:layout_height="60sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/WBC_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+
+
                 <TextView
                     android:id="@+id/RBC"
                     android:layout_width="350dp"
@@ -95,6 +120,17 @@
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/RBC_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:id="@+id/Hemoglobin"
@@ -105,12 +141,34 @@
                     android:textColor="#000000" />
 
                 <TextView
+                    android:id="@+id/Hemoglobin_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
                     android:id="@+id/Hematocrit"
                     android:layout_width="350dp"
                     android:layout_height="60sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/Hematocrit_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:id="@+id/MCV"
@@ -121,12 +179,34 @@
                     android:textColor="#000000" />
 
                 <TextView
+                    android:id="@+id/MCV_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
                     android:id="@+id/MCH"
                     android:layout_width="350dp"
                     android:layout_height="70sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MCH_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:id="@+id/MCHC"
@@ -137,12 +217,34 @@
                     android:textColor="#000000" />
 
                 <TextView
+                    android:id="@+id/MCHC_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
                     android:id="@+id/RDW"
                     android:layout_width="350dp"
                     android:layout_height="60sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/RDW_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
 
                 <TextView
                     android:id="@+id/Platelets"
@@ -153,12 +255,34 @@
                     android:textColor="#000000" />
 
                 <TextView
+                    android:id="@+id/platelets_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
+
+                <TextView
                     android:id="@+id/MPV"
                     android:layout_width="350dp"
                     android:layout_height="60sp"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
+
+                <TextView
+                    android:id="@+id/MPV_rec"
+                    android:layout_width="400dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:text="watch recommendations"
+                    android:layout_gravity="center_horizontal"
+                    android:textAlignment="center"
+                    android:textStyle="bold"
+                    />
 
 
 

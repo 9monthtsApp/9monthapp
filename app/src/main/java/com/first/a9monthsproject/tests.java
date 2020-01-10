@@ -55,7 +55,7 @@ public class tests extends AppCompatActivity {
     }
 
     private void openWatchTestResult() {
-        Intent in = new Intent(this, watch_tests_results.class);
+        Intent in = new Intent(this, decodingResults.class);
         startActivity(in);
     }
 

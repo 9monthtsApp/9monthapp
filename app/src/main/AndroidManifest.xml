@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".Blood_TestGeneralInfo"></activity>
+        <activity android:name=".GraphicUtils.ListOfRecommendation"></activity>
+        <activity android:name=".blood_reccommendation" />
+        <activity android:name=".Blood_TestGeneralInfo" />
         <activity android:name=".watch_tests_results" />
         <activity android:name=".decodingResults" />
         <activity android:name=".MyTestList" />
