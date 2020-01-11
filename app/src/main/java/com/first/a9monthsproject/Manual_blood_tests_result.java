@@ -8,6 +8,7 @@ import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -19,6 +20,7 @@ import java.util.ArrayList;
 
 public class Manual_blood_tests_result extends AppCompatActivity {
 
+    private ImageButton logoButton;
     private EditText inputGlucose;
     private EditText inputWBC;
     private EditText inputRBC;
@@ -52,6 +54,7 @@ public class Manual_blood_tests_result extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_manual_blood_tests_result);
 
+        logoButton = findViewById(R.id.Image_Logo);
         checkString = findViewById(R.id.check);
         addButton = findViewById(R.id.addResults);
         decoding =findViewById(R.id.decodingResults);
@@ -77,7 +80,12 @@ public class Manual_blood_tests_result extends AppCompatActivity {
         firebaseDatabase = FirebaseDatabase.getInstance();
         databaseReference = FirebaseDatabase.getInstance().getReference();
 
-
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
 
 
@@ -97,6 +105,12 @@ public class Manual_blood_tests_result extends AppCompatActivity {
             }
         });
 
+
+    }
+
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
 
     }
 

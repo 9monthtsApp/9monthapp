@@ -14,6 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".decodingResults_urine"></activity>
+        <activity android:name=".manual_urine_tests_results" />
+        <activity android:name=".choose_scan_or_manul_urine" />
+        <activity android:name=".scanResults_urine" />
         <activity android:name=".chooseScanOrManual" />
         <activity android:name=".Manual_blood_tests_result" />
         <activity android:name=".GraphicUtils.ListOfRecommendation" />
@@ -28,7 +32,6 @@
         <activity android:name=".northe" />
         <activity android:name=".deliveryRoomLocation" />
         <activity android:name=".scanResultPage" />
-        <activity android:name=".AddtestsResults" />
         <activity android:name=".TestsResults" />
         <activity android:name=".babySizeFruit" />
         <activity android:name=".hoosingOptionImageAlbum" />

@@ -12,6 +12,7 @@ import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 
@@ -31,6 +32,7 @@ import java.util.List;
 
 public class decodingResults extends AppCompatActivity {
 
+    private ImageButton logoButton;
     private TextView title;
     private ListView list;
     private Button returnBtn;
@@ -80,6 +82,7 @@ public class decodingResults extends AppCompatActivity {
         title = (TextView) findViewById(R.id.bloodTestsResult);
         list = (ListView) findViewById(R.id.listViewId);
         returnBtn =(Button) findViewById(R.id.returnButton);
+        logoButton = findViewById(R.id.Image_Logo);
 
         //decoding per tests
        checkGlucose =(TextView) findViewById(R.id.Glucose);
@@ -192,9 +195,20 @@ public class decodingResults extends AppCompatActivity {
             }// end of onItemClick
         }); //end of setOnItemClickListener
 
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
 
 
+    }
+
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
     }
 
     private void checkValuesGlucose( String[] str){

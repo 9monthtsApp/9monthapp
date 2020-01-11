@@ -14,6 +14,7 @@ public class Blood_TestGeneralInfo extends AppCompatActivity {
     private ImageButton logoButton;
     private TextView returnButton;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

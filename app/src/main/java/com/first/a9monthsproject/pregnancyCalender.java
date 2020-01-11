@@ -1,7 +1,10 @@
 package com.first.a9monthsproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -23,6 +26,7 @@ import java.util.concurrent.TimeUnit;
 
 
 public class pregnancyCalender extends AppCompatActivity {
+
     private Calendar myCalendar;
     private TextView weekinfo;
     private DatabaseReference myRef;
@@ -36,6 +40,7 @@ public class pregnancyCalender extends AppCompatActivity {
     public String userId;
     public Date lastMenstrualDate;
     public Date currentTime;
+    private ImageButton logoButton;
 
 
 
@@ -44,6 +49,7 @@ public class pregnancyCalender extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pregnancy_calender);
 
+        logoButton= findViewById(R.id.Image_Logo);
 
         firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
@@ -89,7 +95,12 @@ public class pregnancyCalender extends AppCompatActivity {
         });
 
 
-
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
 
 
@@ -140,7 +151,11 @@ public class pregnancyCalender extends AppCompatActivity {
 
 }
 
-
-
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
     }
+
+
+}
 

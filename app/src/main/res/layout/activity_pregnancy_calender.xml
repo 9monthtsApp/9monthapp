@@ -10,12 +10,12 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="160dp"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="#00F0F8FF"
         android:shadowColor="#D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
@@ -47,15 +47,6 @@
         android:layout_height="match_parent"
         android:layout_gravity="center">
 
-
-        <ImageButton
-            android:id="@+id/go_back"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="100dp"
-            android:background="#00ffffff"
-            android:paddingLeft="30dp"
-            ads:srcCompat="@drawable/goback" />
 
         <TextView
             android:id="@+id/Informationaboutweeks"

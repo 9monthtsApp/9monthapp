@@ -6,10 +6,12 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 
 public class South extends AppCompatActivity {
 
     private Button returnButton;
+    private ImageButton logoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -17,6 +19,14 @@ public class South extends AppCompatActivity {
         setContentView(R.layout.activity_south);
 
         returnButton = (Button) findViewById(R.id.returnBtn);
+        logoButton = findViewById(R.id.Image_Logo);
+
+        logoButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomePage();
+            }
+        });
 
         returnButton.setOnClickListener(new View.OnClickListener() {
             @Override

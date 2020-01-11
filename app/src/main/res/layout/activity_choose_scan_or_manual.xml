@@ -58,6 +58,21 @@
         android:hint="Add results manually"
         android:textColorHint="#000000" />
 
+    <TextView
+        android:id="@+id/watchBloodTestInfo"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textSize="20dp"
+        android:textColor="#000000"
+        android:textStyle="bold"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text=" For general blood test information
+        and possible results click here"
+        />
+
+
 
 
 </LinearLayout>

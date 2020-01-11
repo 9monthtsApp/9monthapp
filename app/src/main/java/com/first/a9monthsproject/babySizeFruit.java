@@ -1,7 +1,10 @@
 package com.first.a9monthsproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -36,12 +39,14 @@ public class babySizeFruit extends AppCompatActivity {
     public String userId;
     public Date lastMenstrualDate;
     public Date currentTime;
+    private ImageButton logoButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_baby_size_fruit);
 
+        logoButton= findViewById(R.id.Image_Logo);
 
         firebaseAuth = FirebaseAuth.getInstance();
         mDatabase = FirebaseDatabase.getInstance();
@@ -246,6 +251,19 @@ public class babySizeFruit extends AppCompatActivity {
             public void onCancelled(DatabaseError databaseError) {}
         });
 
+logoButton.setOnClickListener(new View.OnClickListener() {
+    @Override
+    public void onClick(View v) {
+        openHomePage();
+    }
+});
+
+
+    }
+
+    private void openHomePage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
 
     }
 

@@ -15,7 +15,7 @@
         android:layout_width="160dp"
         android:layout_height="80dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="30dp"
         android:background="#00FEFED4 "
         android:shadowColor="#D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
@@ -25,6 +25,7 @@
         android:layout_width="200dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
+        android:layout_marginTop="40dp"
         android:layout_marginHorizontal="100px"
         android:background="#00FEFED4 "
         android:drawableStart="@drawable/person"
@@ -32,7 +33,7 @@
         android:inputType="text"
         android:shadowColor="#D2F8EF"
         android:textColorHighlight="#FFEBCD"
-        android:textColorHint="#676565"
+        android:textColorHint="#FFFFFF"
         android:textSize="25dp"
         android:textStyle="bold" />
 
@@ -65,19 +66,7 @@
             android:textStyle="bold" />
 
 
-        <Button
-            android:id="@+id/Watchrecommendation"
-            android:layout_width="300dp"
-            android:layout_height="70dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="100px"
-            android:background="#70FFC7DE"
-            android:drawableStart="@drawable/recommm"
-            android:textColorHint="#FFFFFF"
-            android:hint="Watch my recommendation"
-            android:layout_marginTop="100dp"
-            android:textSize="20dp"
-            android:textStyle="bold" />
+
 
         <Button
             android:id="@+id/photoAlbum"
@@ -89,7 +78,7 @@
             android:drawableStart="@drawable/albumimage"
             android:textColorHint="#FFFFFF"
             android:hint=" My photo album"
-            android:layout_marginTop="200dp"
+            android:layout_marginTop="100dp"
             android:textSize="20dp"
             android:textStyle="bold" />
 
@@ -103,7 +92,7 @@
         android:drawableStart="@drawable/size"
         android:textColorHint="#FFFFFF"
         android:hint=" My fetus size"
-        android:layout_marginTop="300dp"
+        android:layout_marginTop="200dp"
         android:textSize="20dp"
         android:textStyle="bold"/>
 

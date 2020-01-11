@@ -10,7 +10,7 @@ import androidx.appcompat.app.AppCompatActivity;
 public class personalArea extends AppCompatActivity {
 
     private Button presonalButton;
-    private Button myRecommendationButton;
+
     private Button fetusSize;
     private Button picButton;
 
@@ -22,7 +22,6 @@ public class personalArea extends AppCompatActivity {
         setContentView(R.layout.activity_personal_area);
 
         presonalButton = (Button) findViewById(R.id.WatchPersonalInfo);
-        myRecommendationButton=(Button) findViewById(R.id.personal_area);
         picButton = (Button) findViewById(R.id.photoAlbum);
         fetusSize =(Button) findViewById(R.id.fruitSize);
 
