@@ -14,7 +14,7 @@
         android:layout_width="140dp"
         android:layout_height="100dp"
         android:layout_gravity="right|top"
-        android:layout_marginTop="35dp"
+        android:layout_marginTop="25dp"
         android:background="#00000000"
         android:shadowColor="#D2F8EF"
         app:srcCompat="@drawable/mini_logo" />
@@ -23,7 +23,7 @@
         android:id="@+id/bloodTestsResult"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:textSize="25dp"
         android:textStyle="bold"
         android:textAlignment="center"
@@ -35,7 +35,7 @@
         android:id="@+id/info"
         android:layout_width="300dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:textSize="16dp"
         android:textColor="#ff4d4d"
         android:textAlignment="center"
@@ -56,7 +56,7 @@
         android:layout_width="match_parent"
         android:layout_marginTop="20dp"
         android:background="#70ffb3b3"
-        android:layout_height="150dp">
+        android:layout_height="130dp">
 
 
         <RelativeLayout
@@ -290,6 +290,20 @@
 
         </RelativeLayout>
     </ScrollView>
+
+
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="#ff4d4d"
+        android:layout_marginTop="10dp"
+     android:layout_marginLeft="20dp"
+
+        android:text="**The decoding does not constitute medical advice, professional opinion, or a substitute for consulting
+        with a qualified professional."
+        />
 
     <Button
         android:id="@+id/returnButton"

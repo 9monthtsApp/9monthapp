@@ -29,7 +29,7 @@ public class TestsResults extends AppCompatActivity {
     }
 
     private void openScanResultImage() {
-        Intent in = new Intent(this, scanResultPage.class);
+        Intent in = new Intent(this, chooseScanOrManual.class);
         startActivity(in);
     }
 

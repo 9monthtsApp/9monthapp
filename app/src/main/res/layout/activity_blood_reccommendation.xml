@@ -42,4 +42,15 @@
         android:layout_gravity="center_horizontal"
          android:layout_marginTop="20dp"/>
 
+    <TextView
+        android:id="@+id/warning"
+        android:layout_width="400dp"
+        android:layout_height="wrap_content"
+        android:textSize="16dp"
+        android:textColor="#ff4d4d"
+        android:layout_marginTop="30dp"
+        android:paddingLeft="20dp"
+        android:text="**The content provided is intended to provide general medical and health information and does not constitute medical advice, professional opinion, or a substitute for consulting with a qualified professional as appropriate, on a personal and individual basis."
+        />
+
 </LinearLayout>
