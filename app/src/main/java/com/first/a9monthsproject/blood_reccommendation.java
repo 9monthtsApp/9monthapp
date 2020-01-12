@@ -4,12 +4,16 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.ImageButton;
 import android.widget.TextView;
 
 public class blood_reccommendation extends AppCompatActivity {
 
     private TextView titleText;
     private TextView recommendation;
+    private ImageButton logoBtn;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -18,6 +22,15 @@ public class blood_reccommendation extends AppCompatActivity {
 
         titleText = (TextView) findViewById(R.id.checkTestsType);
         recommendation = (TextView) findViewById(R.id.theRecommendation);
+        logoBtn = findViewById(R.id.Image_Logo);
+
+        logoBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openHomepage();
+            }
+        });
+
 
         Intent i = getIntent();
         String testType = i.getStringExtra("key");
@@ -177,4 +190,9 @@ public class blood_reccommendation extends AppCompatActivity {
 
 
     }
+
+    private void openHomepage() {
+        Intent in = new Intent(this, homePage.class);
+        startActivity(in);
     }
+}

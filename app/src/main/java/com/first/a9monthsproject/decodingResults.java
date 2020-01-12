@@ -548,6 +548,8 @@ public class decodingResults extends AppCompatActivity {
         startActivity(in);
     }
 
+
+    //The function passes the value for which we want to provide the recommendation to the recommendations activity
     private void checkFunc(String s){
 
         Intent i = new Intent (this, blood_reccommendation.class);

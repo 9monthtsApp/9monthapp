@@ -76,7 +76,7 @@
                 <TextView
                     android:id="@+id/Nitrite_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -96,7 +96,7 @@
                 <TextView
                     android:id="@+id/Leucocyets_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -116,7 +116,7 @@
                 <TextView
                     android:id="@+id/ph_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -135,7 +135,7 @@
                 <TextView
                     android:id="@+id/Proteine_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -154,7 +154,7 @@
                 <TextView
                     android:id="@+id/Glucose_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -173,7 +173,7 @@
                 <TextView
                     android:id="@+id/Keytones_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -192,7 +192,7 @@
                 <TextView
                     android:id="@+id/Uroblinogen_result"
                     android:layout_width="350dp"
-                    android:layout_height="70sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -211,7 +211,7 @@
                 <TextView
                     android:id="@+id/Bilirubin_result"
                     android:layout_width="350dp"
-                    android:layout_height="70sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />
@@ -230,7 +230,7 @@
                 <TextView
                     android:id="@+id/EryThrocytes_result"
                     android:layout_width="350dp"
-                    android:layout_height="60sp"
+                    android:layout_height="wrap_content"
                     android:layout_gravity="center_horizontal"
                     android:layout_marginTop="20dp"
                     android:textColor="#000000" />

@@ -86,6 +86,19 @@ public class manual_urine_tests_results extends AppCompatActivity {
 
             }
         });
+
+        decoding.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openDecoding_urine_tests();
+            }
+        });
+    }
+
+    private void openDecoding_urine_tests() {
+        Intent in = new Intent(this, decodingResults_urine.class);
+        startActivity(in);
+
     }
 
     private void openHomePage() {

@@ -190,7 +190,7 @@ public class scanResults_urine extends AppCompatActivity {
     }
 
     private void openDecodingPage() {
-        Intent in = new Intent(this, decodingResults.class);
+        Intent in = new Intent(this, decodingResults_urine.class);
         startActivity(in);
     }
 
