@@ -22,14 +22,13 @@
 
     <TextView
         android:id="@+id/tilePage"
-        android:layout_width="280dp"
+        android:layout_width="334dp"
         android:layout_height="wrap_content"
         android:layout_gravity="left"
         android:layout_marginHorizontal="100px"
         android:layout_marginTop="20dp"
         android:background="#00000000"
-        android:drawableStart="@drawable/rights"
-        android:hint=" Pregnant rights"
+        android:hint=" Second Trimester recommendations"
         android:inputType="text"
         android:shadowColor="#D2F8EF"
         android:textColorHighlight="#FFEBCD"
@@ -73,7 +72,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="On which month should I notify my employer of the pregnancy? "
+                        android:text="Increased appetite"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
@@ -81,67 +80,41 @@
                     <TextView
                         android:id="@+id/part1"
                         android:layout_width="400dp"
-                        android:layout_height="50dp"
+                        android:layout_height="262dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="75dp"
+                        android:layout_marginTop="50dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Starting the fifth month of pregnancy"
+                        android:text="If you started out pregnancy at a 'normal' weight, you only need about 350 calories more than what you were eating before you conceived — that’s only equivalent to, say, a homemade turkey sandwich. (Your calorie needs may vary depending on your BMI when you got pregnant and how much weight you've gained so far, so be sure to check with your doctor.)"
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
-                    <TextView
-                        android:id="@+id/title2"
-                        android:layout_width="348dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="115dp"
-                        android:layout_weight="1"
-                        android:paddingLeft="30dp"
-                        android:paddingTop="5dp"
-                        android:text="If I was absent from work because of pregnancy, do I still get paid?"
-                        android:textColor="#fd9ebd"
-                        android:textSize="18dp"
-                        android:textStyle="bold"></TextView>
-
-                    <TextView
-                        android:id="@+id/part2"
-                        android:layout_width="400dp"
-                        android:layout_height="231dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="170sp"
-                        android:layout_weight="1"
-                        android:paddingLeft="30dp"
-                        android:paddingTop="5dp"
-                        android:text="A pregnant worker who works a full week of work, and more than four hours a day, is entitled to be absent from work for up to 40 hours during the entire pregnancy period, without injury to wages and in addition to the sick days she accrued. A pregnant woman who works less than four hours a day during a full work week is eligible to be absent for 20 hours throughout the pregnancy period (When absenteeism is for medical examinations)."
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
 
                     <TextView
                         android:id="@+id/title3"
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="400sp"
+                        android:layout_marginTop="290dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Is it possible to fire a pregnant woman?"
+                        android:text="Mild swelling"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
 
                     <TextView
                         android:id="@+id/part3"
-                        android:layout_width="400dp"
+                        android:layout_width="392dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginTop="450dp"
+                        android:layout_marginTop="330dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="Israeli law prohibits an employer from dismissing a worker during her pregnancy anyway, if the woman is employed in the workplace for six months or more.
+                        android:text=" Try to avoid standing or sitting for too long, kick up your feet when you can, sleep on your side to help your kidneys move along waste, wear support hose and comfy shoes, drink lots of water, and try to work out as often as you feel up to it.
                         "
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -151,96 +124,66 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="550sp"
+                        android:layout_marginTop="520dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="If I'm pregnant, do I deserve a annuity?"
+                        android:text="'Pregnancy brain' "
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
 
                     <TextView
                         android:id="@+id/part4"
-                        android:layout_width="400dp"
+                        android:layout_width="450dp"
                         android:layout_height="156dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="580sp"
+                        android:layout_marginTop="550dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text=" A working woman who is forced to stay home while maintaining pregnancy because of her medical risk or the fetus resulting from pregnancy - is guaranteed a pregnancy benefit, which comes to compensate the woman for losing her salary while she is in pregnancy.
-                        "
+                        android:text=" Extra forgetful lately? To keep sane, jot down important to-do's, delegate where possible, and eat lots of choline- and DHA-rich foods, both of which may help boost your brain."
                         android:textColor="#000000"
                         android:textSize="18dp" />
+
 
                     <TextView
                         android:id="@+id/title5"
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="720sp"
+                        android:layout_marginTop="700dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="How much time do I get on maternity leave?"
+                        android:text="Stretch marks"
                         android:textColor="#fd9ebd"
                         android:textSize="18dp"
                         android:textStyle="bold"></TextView>
 
                     <TextView
                         android:id="@+id/part5"
-                        android:layout_width="400dp"
-                        android:layout_height="70dp"
+                        android:layout_width="450dp"
+                        android:layout_height="156dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="770sp"
+                        android:layout_marginTop="740dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="A woman who has worked for 12 consecutive months in the same workplace is entitled to 26 weeks of maternity leave - 14 of which are paid
-                        "
+                        android:text=" keeping your pregnancy weight gain in check, moisturizing with cocoa butter and eating plenty of vitamin C foods can help minimize their appearance."
                         android:textColor="#000000"
                         android:textSize="18dp" />
-
-                    <TextView
-                        android:id="@+id/title6"
-                        android:layout_width="348dp"
-                        android:layout_height="50dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="850sp"
-                        android:layout_weight="1"
-                        android:paddingLeft="30dp"
-                        android:paddingTop="5dp"
-                        android:text="What is the amount of the maternity allowance?"
-                        android:textColor="#fd9ebd"
-                        android:textSize="18dp"
-                        android:textStyle="bold"></TextView>
-
-                    <TextView
-                        android:id="@+id/part6"
-                        android:layout_width="400dp"
-                        android:layout_height="138dp"
-                        android:layout_gravity="left"
-                        android:layout_marginTop="900sp"
-                        android:layout_weight="1"
-                        android:paddingLeft="30dp"
-                        android:paddingTop="5dp"
-                        android:text="If you are an employed or self-employed worker, the birth allowance is calculated per day: the salary or full income as independent in the three months prior to the 1st of the month you stopped working, divided by 90.
-                        "
-                        android:textColor="#000000"
-                        android:textSize="18dp" />
-
 
                     <Button
                         android:id="@+id/goback"
                         android:layout_width="330dp"
-                        android:layout_marginTop="1100dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center_horizontal"
-                        android:textColorHint="#FFFFFF"
                         android:layout_marginHorizontal="100px"
+                        android:layout_marginTop="870dp"
                         android:background="#95F5B5C3"
-                        android:hint="Return to QA list"
+                        android:hint="Return to recommendations page"
+                        android:textColorHint="#FFFFFF"
                         android:textSize="20dp"
                         android:textStyle="bold" />
 

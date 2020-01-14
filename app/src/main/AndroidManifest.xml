@@ -14,7 +14,12 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recommendations_weight"></activity>
+        <activity android:name=".third_trim_recommendation"></activity>
+        <activity android:name=".second_trim_recommendation" />
+        <activity android:name=".first_trim_recommendation" />
+        <activity android:name=".main_recommendation_general" />
+        <activity android:name=".main_recommendation_blood" />
+        <activity android:name=".recommendations_weight" />
         <activity android:name=".main_recommendation_urine" />
         <activity android:name=".urine_recommendations" />
         <activity android:name=".Urine_testsgeneralInfo" />
