@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".third_trim_recommendation"></activity>
+        <activity android:name=".pregnant_rightsQa"></activity>
+        <activity android:name=".breastfeeding_qa" />
+        <activity android:name=".third_trim_recommendation" />
         <activity android:name=".second_trim_recommendation" />
         <activity android:name=".first_trim_recommendation" />
         <activity android:name=".main_recommendation_general" />
@@ -58,7 +60,6 @@
         <activity android:name=".highRiskArticle1" />
         <activity android:name=".highRiskArticles" />
         <activity android:name=".vaccineAndTestingQA" />
-        <activity android:name=".pregnant_rights_QA" />
         <activity android:name=".breastfeedingQA" />
         <activity android:name=".notritonAndSportQA" />
         <activity android:name=".nutritionAndSportQA" />

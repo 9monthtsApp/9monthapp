@@ -1,14 +1,14 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class pregnant_rights_QA extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class pregnant_rightsQa extends AppCompatActivity {
 
     private Button returnButton;
     private ImageButton logoButton;

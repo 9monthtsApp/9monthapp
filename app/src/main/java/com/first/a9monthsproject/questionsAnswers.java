@@ -1,12 +1,11 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
-import android.widget.ImageButton;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class questionsAnswers extends AppCompatActivity {
 
@@ -108,13 +107,13 @@ public class questionsAnswers extends AppCompatActivity {
 
     //use fun to move to breastfeeding QA page
     public void openBreastfeddingQA() {
-        Intent in = new Intent(this, breastfeedingQA.class);
+        Intent in = new Intent(this, breastfeeding_qa.class);
         startActivity(in);
     }
 
     //use fun to move to pregnant_rights QA page
     public void openPregnantRightsPage() {
-        Intent in = new Intent(this, pregnant_rights_QA.class);
+        Intent in = new Intent(this, pregnant_rightsQa.class);
         startActivity(in);
     }
 

@@ -1,14 +1,14 @@
 package com.first.a9monthsproject;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageButton;
 
-public class breastfeedingQA extends AppCompatActivity {
+import androidx.appcompat.app.AppCompatActivity;
+
+public class breastfeeding_qa extends AppCompatActivity {
 
     private Button returnButton;
     private ImageButton logoButton;
@@ -17,7 +17,7 @@ public class breastfeedingQA extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_breastfeeding_q);
+        setContentView(R.layout.activity_breastfeeding_qa);
 
         returnButton= (Button) findViewById(R.id.goback);
         logoButton=(ImageButton) findViewById(R.id.Image_Logo);
@@ -37,6 +37,7 @@ public class breastfeedingQA extends AppCompatActivity {
             }
         });
     }
+
 
     //use fun to move on to main QA page
     public void openQApage() {
