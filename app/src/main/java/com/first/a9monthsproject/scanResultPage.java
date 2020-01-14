@@ -177,7 +177,7 @@ public class scanResultPage extends AppCompatActivity {
              for (String a : result) {
 
                  //adding the values ​​we read into firebase
-                 databaseReference.child("MUsers").child(user.getUid()).child("Blood_tests_result").push().setValue(a);
+                 databaseReference.child("MUsers").child(user.getUid()).child("Tests_result_blood").push().setValue(a);
 
              }//end loop on result
 

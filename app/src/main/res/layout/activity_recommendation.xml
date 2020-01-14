@@ -75,6 +75,20 @@
             android:textSize="20dp"
             android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/general"
+            android:layout_width="300dp"
+            android:textColorHint="#FFFFFF"
+            android:layout_marginTop="200dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginHorizontal="100px"
+            android:background="#70FFC7DE"
+            android:drawableStart="@drawable/results"
+            android:hint="  General recommendations by topic"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+
 
 
 
