@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/pregnant9"
+    android:background="@drawable/homepageimg"
     android:orientation="vertical"
     tools:context=".MainActivity">
 
@@ -135,7 +135,7 @@
             android:textColorHint="#FFFFFF"
             android:layout_marginHorizontal="100px"
             android:background="#80F5DA81"
-            android:drawableStart="@drawable/fetus"
+            android:drawableStart="@drawable/fetus1"
             android:hint="Delivery rooms"
             android:textSize="20dp"
             android:textStyle="bold" />

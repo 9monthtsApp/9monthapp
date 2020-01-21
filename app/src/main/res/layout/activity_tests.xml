@@ -100,7 +100,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:background="#60000000"
-            android:drawableStart="@drawable/addtest2"
+            android:drawableStart="@drawable/addtest3"
             android:textColorHint="#FFFFFF"
             android:hint="Watch tests results"
             android:layout_marginTop="330dp"

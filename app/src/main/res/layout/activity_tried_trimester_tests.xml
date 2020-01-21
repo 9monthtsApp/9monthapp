@@ -131,7 +131,7 @@ Price - free (quarterly fee of 33 NIS)"
 
                 <TextView
                     android:id="@+id/prat3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="400dp"
                     android:layout_height="wrap_content"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"
@@ -158,7 +158,7 @@ Price - for women with risk factors – free"
 
                 <TextView
                     android:id="@+id/part4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="400dp"
                     android:layout_height="82dp"
                     android:layout_gravity="left"
                     android:paddingLeft="30dp"

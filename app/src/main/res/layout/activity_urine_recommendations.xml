@@ -39,6 +39,8 @@
         />
 
 
+
+
     <TextView
         android:id="@+id/theRecommendation"
         android:layout_width="370dp"
@@ -47,6 +49,7 @@
         android:textColor="#000000"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="20dp"/>
+
 
 
 
@@ -60,7 +63,6 @@
         android:paddingLeft="20dp"
         android:text="**The content provided is intended to provide general medical and health information and does not constitute medical advice, professional opinion, or a substitute for consulting with a qualified professional as appropriate, on a personal and individual basis."
         />
-
 
 
 

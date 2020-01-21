@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -47,6 +48,8 @@ public class Manual_blood_tests_result extends AppCompatActivity {
     private DatabaseReference databaseReference;
     private FirebaseAuth mAuth;
 
+
+    private long mLastClickTime = 0;
 
 
     @Override
@@ -92,7 +95,15 @@ public class Manual_blood_tests_result extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-            addTestResult();
+
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 10000) {
+                    return;
+                }
+                else {
+                    mLastClickTime = SystemClock.elapsedRealtime();
+
+                    addTestResult();
+                }
 
 
             }

@@ -86,8 +86,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="For now, stick to the foods you know won’t upset your stomach, eat small, frequent meals amd cut back on processed and greasy/fatty foods.eat fresh ginger or drink ginger tee. take your prenatal vitamin (B6 helps with nausea).
-                         drink lots of water and try sucking on lemon candies. If all else fails, talk to your doctor about other possible remedies, including prescription medication and a switch to a prenatal vitamin with higher doses of B6."
+                        android:text="For now, stick to the foods you know won’t upset your stomach, eat small, frequent meals amd cut back on processed and greasy/fatty foods.eat fresh ginger or drink ginger tee. take your prenatal vitamin (B6 helps with nausea).Drinking lots of water and try sucking on lemon candies. If all else fails, talk to your doctor about other possible remedies, including prescription medication and a switch to a prenatal vitamin with higher doses of B6."
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
@@ -115,7 +114,7 @@
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text=" Try to avoid going overboard when cravings hit; if they’re overwhelming, find something else to distract you. For aversions, focus on eating small meals containing only the foods you can stomach right now.
+                        android:text=" Try to avoid going overboard when cravings hit. If they’re overwhelming, find something else to distract you. For aversions, focus on eating small meals containing only the foods you can stomach right now.
                         "
                         android:textColor="#000000"
                         android:textSize="18dp" />
@@ -125,7 +124,7 @@
                         android:layout_width="348dp"
                         android:layout_height="50dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="520dp"
+                        android:layout_marginTop="500dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
@@ -136,14 +135,14 @@
 
                     <TextView
                         android:id="@+id/part4"
-                        android:layout_width="450dp"
+                        android:layout_width="400dp"
                         android:layout_height="156dp"
                         android:layout_gravity="left"
-                        android:layout_marginTop="550dp"
+                        android:layout_marginTop="530dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
-                        android:text="   Try to wash your clothes more frequently and surround yourself with ginger and lemon scents, which tend to help ease nausea, too. If you feel comfortable, you could ask those close to you to tone down the strong offending scents, too.
+                        android:text="Try to wash your clothes more frequently and surround yourself with ginger and lemon scents, which tend to help ease nausea, too. If you feel comfortable, you could ask those close to you to tone down the strong offending scents, too.
                         "
                         android:textColor="#000000"
                         android:textSize="18dp" />

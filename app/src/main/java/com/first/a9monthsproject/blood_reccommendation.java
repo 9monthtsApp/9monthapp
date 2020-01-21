@@ -1,18 +1,49 @@
 package com.first.a9monthsproject;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.ImageButton;
+import android.widget.ListView;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class blood_reccommendation extends AppCompatActivity {
 
     private TextView titleText;
     private TextView recommendation;
     private ImageButton logoBtn;
+    private Button helpBtn;
+    private Button not_helpBtn;
+
+
+    List<String> keyList;
+    ArrayList<String> arrayList;
+    ArrayAdapter<String> arrayAdapter;
+    private ListView list;
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
+
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference mDatabaseReference;
 
 
     @Override
@@ -20,9 +51,25 @@ public class blood_reccommendation extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_blood_reccommendation);
 
+        //firebase
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
+
+        list = (ListView) findViewById(R.id.listViewId2);
         titleText = (TextView) findViewById(R.id.checkTestsType);
         recommendation = (TextView) findViewById(R.id.theRecommendation);
         logoBtn = findViewById(R.id.Image_Logo);
+        helpBtn = findViewById(R.id.good);
+        not_helpBtn = findViewById(R.id.bad);
+
+
+
+        arrayList = new ArrayList<String>();
+        keyList = new ArrayList<String>();
+        arrayAdapter = new ArrayAdapter<String>(blood_reccommendation.this ,android.R.layout.simple_list_item_1,arrayList);
+        list.setAdapter(arrayAdapter);
 
         logoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,6 +110,25 @@ public class blood_reccommendation extends AppCompatActivity {
                 titleText.setText("High number of white blood cells: ");
                 recommendation.setText("High values usually indicate the existence of an infection. In other, very rare cases, very high values may indicate blood disease or cancer.\n" +
                         "There is nothing to worry about in most cases this is a simple illness that requires antibiotic treatment, please contact your family doctor for appropriate medication.");
+
+            helpBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mDatabaseReference.child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("1").push().setValue("1");
+                    openWeigh_rec();
+                }
+            });
+
+            not_helpBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mDatabaseReference.child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("2").push().setValue("1");
+                    openWeigh_rec2();
+
+                }
+            });
+
+
 
             }
 
@@ -191,8 +257,27 @@ public class blood_reccommendation extends AppCompatActivity {
 
     }
 
+    private void openWeigh_rec() {
+
+     Intent in = new Intent( this,recommendations_weight.class);
+       in.putExtra("key", "highWBC");
+        startActivity(in);
+
+
+    }
+
+    private void openWeigh_rec2() {
+
+        Intent in = new Intent( this,recommendation_wight_sub.class);
+        in.putExtra("key", "highWBC");
+        startActivity(in);
+
+
+    }
+
     private void openHomepage() {
         Intent in = new Intent(this, homePage.class);
         startActivity(in);
     }
+
 }

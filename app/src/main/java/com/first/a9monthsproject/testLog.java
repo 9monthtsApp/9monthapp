@@ -6,8 +6,10 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.view.MenuItem;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -23,15 +25,16 @@ import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class testLog extends AppCompatActivity {
 
     private ListView testsList;
     private Button addButton;
-    private Button removeButton;
     private Button showMyTestList;
     private EditText testName;
 
+    List<String> keyList;
     ArrayList<String> arrayList;
     ArrayAdapter<String> arrayAdapter;
 
@@ -42,18 +45,22 @@ public class testLog extends AppCompatActivity {
     private static final String TAG = "MainActivity";
     public String userId;
 
+    private long mLastClickTime = 0;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_test_log);
 
+
+
         //xml
         addButton= (Button) findViewById(R.id.addtest);
         testName = (EditText) findViewById(R.id.inputText);
         testsList = (ListView) findViewById(R.id.listView);
         showMyTestList = (Button) findViewById(R.id.showList);
-        removeButton = (Button) findViewById(R.id.removeTest);
+
 
         //firebase
         firebaseAuth = FirebaseAuth.getInstance();
@@ -65,6 +72,7 @@ public class testLog extends AppCompatActivity {
         mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
         //list
+        keyList = new ArrayList<String>();
         arrayList = new ArrayList<String>();
         arrayAdapter = new ArrayAdapter<String>(testLog.this ,android.R.layout.simple_list_item_1,arrayList);
         testsList.setAdapter(arrayAdapter);
@@ -73,14 +81,22 @@ public class testLog extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                String string = testName.getText().toString();
-                arrayList.add(string);
-                mDatabaseReference.child("MUsers").child(user.getUid()).child("Tests_List").push().setValue(string);
-                arrayAdapter.notifyDataSetChanged();
 
 
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 10000) {
+                    return;
+                }
+                else {
+                    mLastClickTime = SystemClock.elapsedRealtime();
+
+                    String string = testName.getText().toString();
+                    arrayList.add(string);
+                    mDatabaseReference.child("MUsers").child(user.getUid()).child("Tests_List").push().setValue(string);
+                    arrayAdapter.notifyDataSetChanged();
+                }
             }
         });
+
 
 
 

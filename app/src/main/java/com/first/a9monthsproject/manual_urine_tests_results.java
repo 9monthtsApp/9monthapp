@@ -4,6 +4,7 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.SystemClock;
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +41,7 @@ public class manual_urine_tests_results extends AppCompatActivity {
     String tests_results = "  Nitrite Neucocytes PH ProteineUR Glucose Keytones Uroblinogen Bilirubin EryThrocytes";
 
     private ArrayList<String> arrayListString;
-
+    private long mLastClickTime = 0;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -81,7 +82,15 @@ public class manual_urine_tests_results extends AppCompatActivity {
         addButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                addTestResult();
+
+                if (SystemClock.elapsedRealtime() - mLastClickTime < 10000) {
+                    return;
+                }
+                else {
+                    mLastClickTime = SystemClock.elapsedRealtime();
+
+                    addTestResult();
+                }
 
 
             }

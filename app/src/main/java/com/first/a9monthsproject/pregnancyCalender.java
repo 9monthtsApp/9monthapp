@@ -57,9 +57,6 @@ public class pregnancyCalender extends AppCompatActivity {
         FirebaseUser user = firebaseAuth.getCurrentUser();
         String userKey = user.getUid();
 
-       //Toast.makeText(pregnancyCalender.this, "week" + userKey , Toast.LENGTH_LONG).show();
-
-
         mDb.child("MUsers").child(userKey).child("Pregnancy_week").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot dataSnapshot) {
@@ -89,6 +86,7 @@ public class pregnancyCalender extends AppCompatActivity {
 
                 weekinfo.setText("Congragulations!! You are at week number "+weeks+ ", day " + day);
             }
+
 
             @Override
             public void onCancelled(DatabaseError databaseError) {}

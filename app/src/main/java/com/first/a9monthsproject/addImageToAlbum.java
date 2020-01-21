@@ -78,7 +78,7 @@ public class addImageToAlbum extends AppCompatActivity {
        String userId = user.getUid();
 
 
-        //save the images in "uploads" folder in pur firebase storage
+        //save the images in "uploads" folder in firebase storage
         mStorageRef= FirebaseStorage.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
         mDatabaseRef =FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 

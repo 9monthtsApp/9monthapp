@@ -2,7 +2,6 @@ package com.first.a9monthsproject;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
-import androidx.annotation.VisibleForTesting;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -14,7 +13,6 @@ import android.widget.ListView;
 import android.widget.TextView;
 
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.database.ChildEventListener;
 import com.google.firebase.database.DataSnapshot;
 import com.google.firebase.database.DatabaseError;
@@ -25,7 +23,7 @@ import com.google.firebase.database.ValueEventListener;
 import java.util.ArrayList;
 import java.util.List;
 
-public class recommendations_weight extends AppCompatActivity {
+public class recommendation_wight_sub extends AppCompatActivity {
 
     List<String> keyList;
     ArrayList<String> arrayList;
@@ -35,7 +33,7 @@ public class recommendations_weight extends AppCompatActivity {
     private TextView check2;
     private TextView check4;
     private TextView check5;
-    private Button addBtn;
+    private Button subBtn;
 
 
     //firebase
@@ -47,24 +45,27 @@ public class recommendations_weight extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_recommendations_weight);
+        setContentView(R.layout.activity_recommendation_wight_sub);
+
 
         list = (ListView) findViewById(R.id.listViewId2);
         check2 = findViewById(R.id.check3);
         check4 = findViewById(R.id.check4);
         check5 = findViewById(R.id.check5);
-        addBtn = findViewById(R.id.addW);
+        subBtn = findViewById(R.id.subW);
+
 
         arrayList = new ArrayList<String>();
         keyList = new ArrayList<String>();
-        arrayAdapter = new ArrayAdapter<String>(recommendations_weight.this ,android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(recommendation_wight_sub.this, android.R.layout.simple_list_item_1, arrayList);
         list.setAdapter(arrayAdapter);
 
         mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
 
-        mDatabaseReference= FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("1");
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("2");
+
 
         mDatabaseReference.addChildEventListener(new ChildEventListener() {
             @Override
@@ -73,19 +74,20 @@ public class recommendations_weight extends AppCompatActivity {
                 arrayList.add(value); // include the scan values
                 keyList.add(dataSnapshot.getKey()); //include the id of each tests
                 arrayAdapter.notifyDataSetChanged();
-                int count = list.getAdapter().getCount();;
-                if ( count !=0) {
-                    check2.append(" " +"1");
+                int count = list.getAdapter().getCount();
+                //check the amount of feedback for each recommendation
+                if (count != 0) {
+                    check2.append(" " + "1");
                 }
 
                 String toastText = check2.getText().toString();
 
                 String[] result = toastText.split(" ");
-                int cnt = result.length;
+                int cnt = result.length; // the number of feedback
                 // the recommendation is helpfull
-                if(cnt >= 4){
+                if (cnt >= 4) { // 10 users
                     check4.setText("!!!!");
-                    calc ();
+                    calc();
 
                 }
 
@@ -114,34 +116,30 @@ public class recommendations_weight extends AppCompatActivity {
         });
 
 
-
-
-
-
     }
 
 
+    public void func(String s ){
+        Intent in = new Intent( this,updateWeight_num1_sub.class);
+        in.putExtra("key", s);
+        startActivity(in);
+    }
 
     public void calc (){
 
-        mAuth = FirebaseAuth.getInstance();
-        mDatabase = FirebaseDatabase.getInstance();
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
 
-       mDatabaseReference= FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("Weight").child("High").child("1");
-
+        mDatabaseReference = mDatabase.getReference();
+        mDatabaseReference= FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("Weight").child("High").child("1");
         mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 final String userId = dataSnapshot.getValue(String.class);
-                addBtn.setOnClickListener(new View.OnClickListener() {
+                subBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
                         func(userId);
                     }
                 });
-
-
 
 
             }
@@ -153,13 +151,4 @@ public class recommendations_weight extends AppCompatActivity {
         });
 
     }
-
-    public void func(String s ){
-        Intent in = new Intent( this,updateWeight_num2.class);
-        in.putExtra("key", s);
-        startActivity(in);
-    }
-
 }
-
-

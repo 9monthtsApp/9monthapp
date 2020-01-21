@@ -86,19 +86,7 @@
 
 
 
-        <Button
-            android:id="@+id/removeTest"
-            android:layout_width="165dp"
-            android:layout_height="50dp"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginHorizontal="100px"
-            android:layout_marginTop="100dp"
-            android:background="#00ffffff"
-            android:drawableStart="@drawable/removetests"
-            android:hint="Remove test"
-            android:textColorHint="#090909"
-            android:textSize="18dp"
-            android:textStyle="bold" />
+
 
         <Button
             android:id="@+id/showList"
@@ -110,7 +98,7 @@
             android:background="#80ffb3b3"
             android:textSize="18dp"
             android:textStyle="bold"
-            android:layout_marginTop="170dp"/>
+            android:layout_marginTop="120dp"/>
 
 
 

@@ -14,7 +14,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".pregnant_rightsQa"></activity>
+        <activity android:name=".recommendation_wight_sub"></activity>
+        <activity android:name=".updateWeight_num1_sub" />
+        <activity android:name=".updateWeight_num2" />
+        <activity android:name=".pregnant_rightsQa" />
         <activity android:name=".breastfeeding_qa" />
         <activity android:name=".third_trim_recommendation" />
         <activity android:name=".second_trim_recommendation" />

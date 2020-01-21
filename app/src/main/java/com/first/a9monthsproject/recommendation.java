@@ -13,6 +13,7 @@ public class recommendation extends AppCompatActivity {
     private Button bloodRec;
     private Button generalRec;
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,6 +22,7 @@ public class recommendation extends AppCompatActivity {
         urineRec = findViewById(R.id.urineRes);
         bloodRec = findViewById(R.id.bloodRes);
         generalRec= findViewById(R.id.generalInfo);
+
 
         urineRec.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -41,7 +43,11 @@ public class recommendation extends AppCompatActivity {
                 openGeneralRecommendation();
             }
         });
+
+
     }
+
+
 
     private void openUrineRecommendation() {
         Intent in = new Intent( this,main_recommendation_urine.class);

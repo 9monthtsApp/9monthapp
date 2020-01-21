@@ -4,12 +4,14 @@ import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -23,6 +25,7 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 import com.google.firebase.database.ValueEventListener;
+import com.google.firebase.storage.StorageReference;
 
 
 import java.util.ArrayList;
@@ -32,10 +35,14 @@ public class MyTestList extends AppCompatActivity {
 
     private TextView title;
     private ListView list;
+    private ImageButton logoBtn;
+
 
     List<String> keyList;
     ArrayList<String> arrayList;
     ArrayAdapter<String> arrayAdapter;
+
+
 
     private FirebaseDatabase mDatabase;
     private DatabaseReference mDatabaseReference;
@@ -50,6 +57,8 @@ public class MyTestList extends AppCompatActivity {
 
         list = (ListView) findViewById(R.id.listView1);
         title = (TextView) findViewById(R.id.title_test_list) ;
+        logoBtn = findViewById(R.id.Image_Logo);
+
 
 
         //decoding per tests
@@ -73,7 +82,7 @@ public class MyTestList extends AppCompatActivity {
             @Override
             public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
                 String value = dataSnapshot.getValue(String.class);
-                arrayList.add(value); // include the scan values
+                arrayList.add(value); // include the test values
                 keyList.add(dataSnapshot.getKey()); //include the id of each tests
                 arrayAdapter.notifyDataSetChanged();
 
@@ -103,9 +112,44 @@ public class MyTestList extends AppCompatActivity {
         });
 
 
+            list.setOnItemClickListener(new AdapterView.OnItemClickListener() {
+                @Override
+                public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
+                    arrayList.remove(position);
+                    arrayAdapter.notifyDataSetChanged();
+                    mDatabaseReference.child(keyList.get(position)).removeValue();
+                    keyList.remove(position);
+                }
+            });
 
+            logoBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    openHomePage();
+                }
+            });
+
+
+
+
+
+
+
+
+
+
+
+
+            }// end of onItemClick
+
+    private void openHomePage() {
+        Intent in = new Intent(this, MyTestList.class);
+        startActivity(in);
     }
+
+
 }
+
 
 
 

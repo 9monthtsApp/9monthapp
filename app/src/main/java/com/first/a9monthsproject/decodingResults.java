@@ -120,13 +120,10 @@ public class decodingResults extends AppCompatActivity {
 
         mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
-
-
         FirebaseUser user = mAuth.getCurrentUser();
         userId = user.getUid();
-        //FirebaseUser users = myFirebaseRef.child("users");
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Tests_result_blood");
 
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Tests_result_blood");
 
         mDatabaseReference.addChildEventListener(new ChildEventListener() {
             @Override

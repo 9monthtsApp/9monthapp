@@ -3,12 +3,27 @@ package com.first.a9monthsproject;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageButton;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.database.ChildEventListener;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
+import java.text.SimpleDateFormat;
+import java.util.HashMap;
+import java.util.Map;
 
 public class main_recommendation_blood extends AppCompatActivity {
 
@@ -17,11 +32,21 @@ public class main_recommendation_blood extends AppCompatActivity {
     private ImageButton viewRec;
     private TextView theRec;
     private TextView worngInput_text;
+    private Button cnt;
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_recommendation_blood);
+
+        //firebase
+        mAuth = FirebaseAuth.getInstance();
+        firebaseDatabase = FirebaseDatabase.getInstance();
+        databaseReference = FirebaseDatabase.getInstance().getReference();
 
 
         logoButton = findViewById(R.id.Image_Logo);
@@ -29,6 +54,7 @@ public class main_recommendation_blood extends AppCompatActivity {
         viewRec = findViewById(R.id.viewrecommendations);
         theRec = findViewById(R.id.recommendations);
         worngInput_text= findViewById(R.id.worngInput);
+        cnt = findViewById(R.id.counter);
 
         logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -37,6 +63,14 @@ public class main_recommendation_blood extends AppCompatActivity {
             }
         });
 
+        cnt.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+                databaseReference.child("Recommendations").child("Blood").child("WBC").child("High").child("Weight").child("1").push().setValue("1");
+
+            }
+        });
 
 
 

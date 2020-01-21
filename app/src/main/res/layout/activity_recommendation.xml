@@ -55,7 +55,7 @@
             android:layout_marginHorizontal="100px"
             android:textColorHint="#FFFFFF"
             android:background="#70FFC7DE"
-            android:drawableStart="@drawable/blood1"
+            android:drawableStart="@drawable/blood2"
             android:hint="  Recommendations based on blood test results"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -70,7 +70,7 @@
             android:layout_gravity="center_horizontal"
             android:layout_marginHorizontal="100px"
             android:background="#70FFC7DE"
-            android:drawableStart="@drawable/urine1"
+            android:drawableStart="@drawable/urine2"
             android:hint="  Recommendations based on urine test results"
             android:textSize="20dp"
             android:textStyle="bold" />
@@ -88,6 +88,8 @@
             android:hint="  General recommendations by trimester"
             android:textSize="20dp"
             android:textStyle="bold" />
+
+
 
 
 

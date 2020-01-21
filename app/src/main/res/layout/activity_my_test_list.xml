@@ -10,10 +10,10 @@
     tools:context=".MainActivity">
 
 
-    <ImageView
+    <ImageButton
         android:id="@+id/Image_Logo"
         android:layout_width="160dp"
-        android:layout_height="80dp"
+        android:layout_height="100dp"
         android:layout_gravity="right|top"
         android:layout_marginTop="50dp"
         android:background="#00F0F8FF"
@@ -48,6 +48,20 @@
         android:background="#FFFFFF"
 
         />
+
+    <TextView
+        android:id="@+id/removeTest1"
+        android:layout_width="365dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center_horizontal"
+
+        android:layout_marginTop="20dp"
+        android:background="#00ffffff"
+
+        android:text="To delete tests - please click on the test you want to delete"
+        android:textColor="#FF0000"
+        android:textSize="18dp"
+         />
 
 
 

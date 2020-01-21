@@ -86,7 +86,7 @@
         android:id="@+id/ScrollView01"
         android:layout_width="match_parent"
         android:layout_marginTop="10dp"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
 
 
         <RelativeLayout
@@ -129,19 +129,24 @@
                         android:layout_width="400dp"
                         android:layout_height="wrap_content"
                         android:layout_gravity="left"
-                        android:layout_marginTop="45dp"
+                        android:layout_marginTop="35dp"
                         android:layout_weight="1"
                         android:paddingLeft="30dp"
                         android:paddingTop="5dp"
+                        android:layout_marginBottom="10dp"
                         android:text=""
                         android:textColor="#000000"
                         android:textSize="18dp" />
 
-
-
-
-
-
+                    <Button
+                        android:id="@+id/counter"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_width="300dp"
+                        android:textAllCaps="false"
+                        android:layout_marginTop="250dp"
+                        android:layout_height="wrap_content"
+                        android:text="Tap if the recommendation helpful"
+                        />
 
 
 
@@ -149,6 +154,7 @@
             </LinearLayout>
         </RelativeLayout>
     </ScrollView>
+
 
 
 </LinearLayout>
