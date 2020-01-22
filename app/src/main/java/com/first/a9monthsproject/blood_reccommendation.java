@@ -65,10 +65,9 @@ public class blood_reccommendation extends AppCompatActivity {
         not_helpBtn = findViewById(R.id.bad);
 
 
-
         arrayList = new ArrayList<String>();
         keyList = new ArrayList<String>();
-        arrayAdapter = new ArrayAdapter<String>(blood_reccommendation.this ,android.R.layout.simple_list_item_1,arrayList);
+        arrayAdapter = new ArrayAdapter<String>(blood_reccommendation.this, android.R.layout.simple_list_item_1, arrayList);
         list.setAdapter(arrayAdapter);
 
         logoBtn.setOnClickListener(new View.OnClickListener() {
@@ -105,11 +104,11 @@ public class blood_reccommendation extends AppCompatActivity {
                     "There is nothing to worry about, just to schedule an appointment with your family doctor to find out about the existence of a viral illness and taking appropriate medication.");
         }
 
-            //recommendation for high WBC
+        //recommendation for high WBC
         if (testType.equals("highWBC")) {
-                titleText.setText("High number of white blood cells: ");
-                recommendation.setText("High values usually indicate the existence of an infection. In other, very rare cases, very high values may indicate blood disease or cancer.\n" +
-                        "There is nothing to worry about in most cases this is a simple illness that requires antibiotic treatment, please contact your family doctor for appropriate medication.");
+            titleText.setText("High number of white blood cells: ");
+            recommendation.setText("High values usually indicate the existence of an infection. In other, very rare cases, very high values may indicate blood disease or cancer.\n" +
+                    "There is nothing to worry about in most cases this is a simple illness that requires antibiotic treatment, please contact your family doctor for appropriate medication.");
 
             helpBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
@@ -128,12 +127,14 @@ public class blood_reccommendation extends AppCompatActivity {
                 }
             });
 
+            updateRec();
 
 
-            }
+
+        }
 
         //recommendation for high RBC
-        if(testType.equals("lowRBC")){
+        if (testType.equals("lowRBC")) {
             titleText.setText("Red blood cell deficiency: ");
             recommendation.setText("1. If the anemia occurs following a viral disease - the anemia will pass as soon as the disease passes.\n" +
                     "2. If the anemia appears from iron deficiency - the recommendation is to consume iron-rich products such as red meat, chicken and fish, legumes, fruits, green vegetables and grains. In addition, iron supplements can be consumed when the preference is iron in powder for increasing iron absorption in the body, which significantly reduces the side effects of abdominal pain during pregnancy.\n" +
@@ -251,33 +252,52 @@ public class blood_reccommendation extends AppCompatActivity {
         }
 
 
-
-
-
-
     }
 
+    //open update recommendations weight - positive feedback
     private void openWeigh_rec() {
 
-     Intent in = new Intent( this,recommendations_weight.class);
-       in.putExtra("key", "highWBC");
-        startActivity(in);
-
-
-    }
-
-    private void openWeigh_rec2() {
-
-        Intent in = new Intent( this,recommendation_wight_sub.class);
+        Intent in = new Intent(this, recommendations_weight.class);
         in.putExtra("key", "highWBC");
         startActivity(in);
 
 
     }
 
+    //open update recommendations weight - negative feedback
+    private void openWeigh_rec2() {
+
+        Intent in = new Intent(this, recommendation_wight_sub.class);
+        in.putExtra("key", "highWBC");
+        startActivity(in);
+
+    }
+
     private void openHomepage() {
         Intent in = new Intent(this, homePage.class);
         startActivity(in);
+    }
+
+//check if recommendations weight is 0 => if it does the recommendation not available
+    private void updateRec() {
+
+        mDatabaseReference.child("Recommendations").child("Blood").child("WBC").child("Weight").child("High").child("1").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String userId = dataSnapshot.getValue(String.class);
+                if ( userId.equals("0")) {
+                    recommendation.setText("No available recommendations");
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
     }
 
 }
