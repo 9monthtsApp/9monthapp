@@ -31,6 +31,7 @@ public class blood_reccommendation extends AppCompatActivity {
     private ImageButton logoBtn;
     private Button helpBtn;
     private Button not_helpBtn;
+    private TextView recommendation2;
 
 
     List<String> keyList;
@@ -60,6 +61,7 @@ public class blood_reccommendation extends AppCompatActivity {
         list = (ListView) findViewById(R.id.listViewId2);
         titleText = (TextView) findViewById(R.id.checkTestsType);
         recommendation = (TextView) findViewById(R.id.theRecommendation);
+        recommendation2 = (TextView) findViewById(R.id.theRecommendation2);
         logoBtn = findViewById(R.id.Image_Logo);
         helpBtn = findViewById(R.id.good);
         not_helpBtn = findViewById(R.id.bad);
@@ -107,9 +109,9 @@ public class blood_reccommendation extends AppCompatActivity {
         //recommendation for high WBC
         if (testType.equals("highWBC")) {
             titleText.setText("High number of white blood cells: ");
-            recommendation.setText("High values usually indicate the existence of an infection. In other, very rare cases, very high values may indicate blood disease or cancer.\n" +
+            recommendation.setText("1. High values usually indicate the existence of an infection. In other, very rare cases, very high values may indicate blood disease or cancer.\n" +
                     "There is nothing to worry about in most cases this is a simple illness that requires antibiotic treatment, please contact your family doctor for appropriate medication.");
-
+            recommendation2.setText("2. Taking a probiotic supplement");
             helpBtn.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
@@ -286,7 +288,8 @@ public class blood_reccommendation extends AppCompatActivity {
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 String userId = dataSnapshot.getValue(String.class);
                 if ( userId.equals("0")) {
-                    recommendation.setText("No available recommendations");
+                    recommendation.setText("");
+                    recommendation2.setText("Taking a probiotic supplement");
                 }
 
             }

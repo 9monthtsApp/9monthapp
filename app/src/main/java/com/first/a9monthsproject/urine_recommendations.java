@@ -1,18 +1,38 @@
 package com.first.a9monthsproject;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.Button;
 import android.widget.ImageButton;
 import android.widget.TextView;
+
+import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 public class urine_recommendations extends AppCompatActivity {
 
     private TextView titleText;
     private TextView recommendation;
+    private TextView recommendation2;
     private ImageButton logoBtn;
+    private Button helpBtn;
+    private Button not_helpBtn;
+
+    private FirebaseDatabase firebaseDatabase;
+    private DatabaseReference databaseReference;
+    private FirebaseAuth mAuth;
+
+    private FirebaseDatabase mDatabase;
+    private DatabaseReference mDatabaseReference;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,14 +41,24 @@ public class urine_recommendations extends AppCompatActivity {
 
         titleText = (TextView) findViewById(R.id.checkTestsType);
         recommendation = (TextView) findViewById(R.id.theRecommendation);
+        recommendation2 = (TextView) findViewById(R.id.theRecommendation2);
         logoBtn = findViewById(R.id.Image_Logo);
-
+        helpBtn = findViewById(R.id.good1);
+        not_helpBtn = findViewById(R.id.bad1);
         logoBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomepage();
             }
         });
+
+        //firebase
+        mAuth = FirebaseAuth.getInstance();
+        mDatabase = FirebaseDatabase.getInstance();
+        mDatabaseReference = FirebaseDatabase.getInstance().getReference();
+
+
+
 
         Intent i = getIntent();
         String testType = i.getStringExtra("key");
@@ -88,7 +118,26 @@ public class urine_recommendations extends AppCompatActivity {
         if (testType.equals("GlucosePos")) {
 
             titleText.setText("Positive value of glucose: ");
-            recommendation.setText("High blood sugar levels may indicate latent diabetes, so the recommendation is to talk to the attending physician and coordinate sugar loading treatments");
+            recommendation.setText("1. The recommendation is talking to the attending physician and coordinate sugar loading treatments");
+            recommendation2.setText("2. Coordinate sugar loading treatments");
+            helpBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mDatabaseReference.child("Recommendations").child("Urine").child("Glucose").child("feedback").child("1").push().setValue("1");
+                    openWeigh_rec();
+                }
+            });
+
+            not_helpBtn.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    mDatabaseReference.child("Recommendations").child("Urine").child("Glucose").child("feedback").child("2").push().setValue("1");
+                    openWeigh_rec2();
+
+                }
+            });
+
+            updateRec();
         }
 
         //recommendation for positive Ketones
@@ -129,10 +178,48 @@ public class urine_recommendations extends AppCompatActivity {
         }
     }
 
+    //Open update recommendations weight - negative feedback
+    private void openWeigh_rec2() {
+        Intent in = new Intent(this, recommendation_wight_sub.class);
+        in.putExtra("key", "positiveGlu");
+        startActivity(in);
+    }
+
+
+    //open update recommendations weight - positive feedback
+    private void openWeigh_rec() {
+
+        Intent in = new Intent(this, recommendations_weight.class);
+        in.putExtra("key", "positiveGlu");
+        startActivity(in);
+
+
+    }
 
 
 
+    //check if recommendations weight is 0 => if it does the recommendation not available
+    private void updateRec() {
 
+        mDatabaseReference.child("Recommendations").child("Urine").child("Glucose").child("Weight").child("1").addValueEventListener(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                String userId = dataSnapshot.getValue(String.class);
+                if ( userId.equals("0")) {
+                    recommendation.setText("");
+                    recommendation2.setText("Coordinate sugar loading treatments");
+                }
+
+            }
+
+            @Override
+            public void onCancelled(@NonNull DatabaseError databaseError) {
+
+            }
+        });
+
+
+    }
 
     private void openHomepage() {
         Intent in = new Intent(this, homePage.class);

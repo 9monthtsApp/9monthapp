@@ -63,49 +63,140 @@ public class recommendation_wight_sub extends AppCompatActivity {
         mDatabase = FirebaseDatabase.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
+        Intent i = getIntent();
+        String testType = i.getStringExtra("key");
 
-        mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("2");
+
+        if ( testType.equals("highWBC")) {
 
 
-        mDatabaseReference.addChildEventListener(new ChildEventListener() {
-            @Override
-            public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
-                String value = dataSnapshot.getValue(String.class);
-                arrayList.add(value); // include the scan values
-                keyList.add(dataSnapshot.getKey()); //include the id of each tests
-                arrayAdapter.notifyDataSetChanged();
-                int count = list.getAdapter().getCount();
-                //check the amount of feedback for each recommendation
-                if (count != 0) {
-                    check2.append(" " + "1");
+            mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Blood").child("WBC").child("feedback").child("High").child("2");
+
+
+            mDatabaseReference.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                    String value = dataSnapshot.getValue(String.class);
+                    arrayList.add(value); // include the scan values
+                    keyList.add(dataSnapshot.getKey()); //include the id of each tests
+                    arrayAdapter.notifyDataSetChanged();
+                    int count = list.getAdapter().getCount();
+                    //check the amount of feedback for each recommendation
+                    if (count != 0) {
+                        check2.append(" " + "1");
+                    }
+
+                    String toastText = check2.getText().toString();
+
+                    String[] result = toastText.split(" ");
+                    int cnt = result.length; // the number of feedback
+                    // the recommendation is helpfull
+                    if (cnt >= 4) { // 10 users
+                        check4.setText("!!!!");
+                        clacHigh_WBC();
+
+                    }
+
+
                 }
 
-                String toastText = check2.getText().toString();
-
-                String[] result = toastText.split(" ");
-                int cnt = result.length; // the number of feedback
-                // the recommendation is helpfull
-                if (cnt >= 4) { // 10 users
-                    check4.setText("!!!!");
-                    calc();
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
                 }
 
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
 
-            }
+                }
 
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+        }
+
+        if (testType.equals("positiveGlu")) {
+
+
+            mDatabaseReference = FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Urine").child("Glucose").child("feedback").child("2");
+
+
+            mDatabaseReference.addChildEventListener(new ChildEventListener() {
+                @Override
+                public void onChildAdded(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+                    String value = dataSnapshot.getValue(String.class);
+                    arrayList.add(value); // include the scan values
+                    keyList.add(dataSnapshot.getKey()); //include the id of each tests
+                    arrayAdapter.notifyDataSetChanged();
+                    int count = list.getAdapter().getCount();
+                    //check the amount of feedback for each recommendation
+                    if (count != 0) {
+                        check2.append(" " + "1");
+                    }
+
+                    String toastText = check2.getText().toString();
+
+                    String[] result = toastText.split(" ");
+                    int cnt = result.length; // the number of feedback
+                    // the recommendation is helpfull
+                    if (cnt >= 1) { // 10 users
+                        check4.setText("!!!!");
+                        claGlu();
+
+                    }
+
+
+                }
+
+                @Override
+                public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                }
+
+                @Override
+                public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
+
+                }
+
+                @Override
+                public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+
+                }
+
+                @Override
+                public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                }
+            });
+
+        }// end of positive glucose
+
+
+    }
+
+    private void claGlu() {
+
+        mDatabaseReference = mDatabase.getReference();
+        mDatabaseReference= FirebaseDatabase.getInstance().getReference().child("Recommendations").child("Urine").child("Glucose").child("Weight").child("1");
+
+        mDatabaseReference.addValueEventListener(new ValueEventListener() {
             @Override
-            public void onChildChanged(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                final String userId = dataSnapshot.getValue(String.class);
+                subBtn.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        funcGLU(userId);
+                    }
+                });
 
-            }
-
-            @Override
-            public void onChildRemoved(@NonNull DataSnapshot dataSnapshot) {
-
-            }
-
-            @Override
-            public void onChildMoved(@NonNull DataSnapshot dataSnapshot, @Nullable String s) {
 
             }
 
@@ -114,18 +205,21 @@ public class recommendation_wight_sub extends AppCompatActivity {
 
             }
         });
-
-
     }
 
 
-    public void func(String s ){
+    public void funcWBC(String s ){
         Intent in = new Intent( this,updateWeight_num1_sub.class);
         in.putExtra("key", s);
         startActivity(in);
     }
+    public void funcGLU(String s ){
+        Intent in = new Intent( this,upddateWeight_num1_sub_urine.class);
+        in.putExtra("key", s);
+        startActivity(in);
+    }
 
-    public void calc (){
+    public void clacHigh_WBC (){
 
 
         mDatabaseReference = mDatabase.getReference();
@@ -137,7 +231,7 @@ public class recommendation_wight_sub extends AppCompatActivity {
                 subBtn.setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {
-                        func(userId);
+                        funcWBC(userId);
                     }
                 });
 

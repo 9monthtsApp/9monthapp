@@ -14,7 +14,9 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".recommendation_wight_sub"></activity>
+        <activity android:name=".upddateWeight_num1_sub_urine"></activity>
+        <activity android:name=".updateWeight_num2_urine" />
+        <activity android:name=".recommendation_wight_sub" />
         <activity android:name=".updateWeight_num1_sub" />
         <activity android:name=".updateWeight_num2" />
         <activity android:name=".pregnant_rightsQa" />

@@ -197,7 +197,7 @@ public class decodingResults_urine extends AppCompatActivity {
             //provide recommendations
             Nitrite_recommendation.setText("No recommendations are available - your values are proper.");;
 
-        } else if ((str[11]).equals("positive")) {
+        } else if ((str[11]).equals("Positive")) {
             checkNitrite.setText("Your result is positive - therefore the value is not proper ! ");
 
             //provide recommendations for positive Nitrite

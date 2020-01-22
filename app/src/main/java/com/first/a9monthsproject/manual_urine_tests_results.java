@@ -38,7 +38,7 @@ public class manual_urine_tests_results extends AppCompatActivity {
     private TextView checkString;
 
 
-    String tests_results = "  Nitrite Neucocytes PH ProteineUR Glucose Keytones Uroblinogen Bilirubin EryThrocytes";
+    String tests_results = "  Nitrite Leucocytes PH ProteineUR Glucose Keytones Uroblinogen Bilirubin EryThrocytes";
 
     private ArrayList<String> arrayListString;
     private long mLastClickTime = 0;

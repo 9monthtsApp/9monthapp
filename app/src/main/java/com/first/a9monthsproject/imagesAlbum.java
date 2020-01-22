@@ -40,6 +40,7 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
     private ImageButton logoButton;
 
     private FirebaseStorage mStorage;
+    private FirebaseDatabase database;
     private DatabaseReference mDatabaseRef;
     private ValueEventListener mDBlisnter;
     private FirebaseAuth mAuth;
@@ -75,13 +76,16 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
         mStorage = FirebaseStorage.getInstance();
         mAuth = FirebaseAuth.getInstance();
 
+        database = FirebaseDatabase.getInstance();
 
         FirebaseUser user = mAuth.getCurrentUser();
-       String userId = user.getUid();
+        String userId = user.getUid();
 
         mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 
-       mDBlisnter= mDatabaseRef.addValueEventListener(new ValueEventListener() {
+
+
+      mDBlisnter= mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 mUploads.clear();
@@ -97,7 +101,6 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
                 }
 
                 mAdapter.notifyDataSetChanged();
-
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
 
@@ -108,6 +111,7 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
                 mProgressCircle.setVisibility(View.INVISIBLE);
             }
         });
+
 
     }
 
