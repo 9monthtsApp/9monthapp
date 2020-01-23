@@ -32,7 +32,6 @@ public class main_recommendation_blood extends AppCompatActivity {
     private ImageButton viewRec;
     private TextView theRec;
     private TextView worngInput_text;
-    private Button cnt;
 
     private FirebaseDatabase firebaseDatabase;
     private DatabaseReference databaseReference;
@@ -54,7 +53,7 @@ public class main_recommendation_blood extends AppCompatActivity {
         viewRec = findViewById(R.id.viewrecommendations);
         theRec = findViewById(R.id.recommendations);
         worngInput_text= findViewById(R.id.worngInput);
-        cnt = findViewById(R.id.counter);
+
 
         logoButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -63,14 +62,7 @@ public class main_recommendation_blood extends AppCompatActivity {
             }
         });
 
-        cnt.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
 
-                databaseReference.child("Recommendations").child("Blood").child("WBC").child("High").child("Weight").child("1").push().setValue("1");
-
-            }
-        });
 
 
 

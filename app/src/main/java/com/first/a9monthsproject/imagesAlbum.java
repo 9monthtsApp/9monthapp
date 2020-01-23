@@ -36,15 +36,19 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
 
     private RecyclerView mRecycle;
     private ImageAdapter mAdapter;
+    private List<UploadImage> mUploads;
+    private DatabaseReference mDatabaseRef;
+
     private ProgressBar mProgressCircle;
-    private ImageButton logoButton;
+
 
     private FirebaseStorage mStorage;
     private FirebaseDatabase database;
-    private DatabaseReference mDatabaseRef;
+
     private ValueEventListener mDBlisnter;
     private FirebaseAuth mAuth;
-    private List<UploadImage> mUploads;
+
+    private ImageButton logobtn;
 
 
     @Override
@@ -52,47 +56,50 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_images_album);
 
-        logoButton.setOnClickListener(new View.OnClickListener() {
+        logobtn = findViewById(R.id.Image_Logo);
+        logobtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 openHomepage();
             }
         });
 
-        mRecycle =findViewById(R.id.recycleView);
+
+        mRecycle = findViewById(R.id.recycleView);
         mRecycle.setHasFixedSize(true);
         mRecycle.setLayoutManager(new LinearLayoutManager(this));
 
-        mProgressCircle=findViewById(R.id.progressCircle);
+        mProgressCircle = findViewById(R.id.progressCircle);
 
-        mUploads =new ArrayList<>();
+        mUploads = new ArrayList<>();
+
+        mAuth = FirebaseAuth.getInstance();
+        FirebaseUser user = mAuth.getCurrentUser();
+        String userId = user.getUid();
+
+        mStorage = FirebaseStorage.getInstance();
+        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 
         //The adapter provides access to the data items
         // adapter is also responsible for making a view for each item in the data set.
-        mAdapter= new ImageAdapter(imagesAlbum.this, mUploads);
+        mAdapter = new ImageAdapter(imagesAlbum.this, mUploads);
         mRecycle.setAdapter(mAdapter);
         mAdapter.setOnItemClickListner(imagesAlbum.this);
 
         mStorage = FirebaseStorage.getInstance();
         mAuth = FirebaseAuth.getInstance();
-
         database = FirebaseDatabase.getInstance();
 
-        FirebaseUser user = mAuth.getCurrentUser();
-        String userId = user.getUid();
-
-        mDatabaseRef = FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
 
 
-
-      mDBlisnter= mDatabaseRef.addValueEventListener(new ValueEventListener() {
+        mDBlisnter = mDatabaseRef.addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                 mUploads.clear();
 
-            //we get the the image\message from the database
+                //we get the the image\message from the database
                 //dataSnapshot is a list that represent the data ( our uploads items)
-                for (DataSnapshot postSnapShot : dataSnapshot.getChildren()){
+                for (DataSnapshot postSnapShot : dataSnapshot.getChildren()) {
                     //change the datasnapshot to uplaodImage item
                     //the key of the upload image is inside the snapshot
                     UploadImage upload = postSnapShot.getValue(UploadImage.class);
@@ -101,7 +108,12 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
                 }
 
                 mAdapter.notifyDataSetChanged();
+
+                mAdapter.notifyDataSetChanged();
+                mRecycle.setAdapter(mAdapter);
                 mProgressCircle.setVisibility(View.INVISIBLE);
+
+
             }
 
             @Override
@@ -128,6 +140,7 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
 
     @Override
     public void OnDeleteClick(int position) {
+
      // Toast.makeText(this, "delete image" , Toast.LENGTH_LONG).show();
         UploadImage selectItem = mUploads.get(position);
         final String selcetKey = selectItem.getmKey();
@@ -144,11 +157,15 @@ imagesAlbum extends AppCompatActivity implements ImageAdapter.OnItemClickListene
             }
         });
 
-    }
+
+}
+
 //the function delete the event listener of the image that wes deleted
     @Override
     protected void onDestroy() {
         super.onDestroy();
         mDatabaseRef.removeEventListener(mDBlisnter);
     }
+
+
 }

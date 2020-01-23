@@ -80,7 +80,10 @@ public class addImageToAlbum extends AppCompatActivity {
 
         //save the images in "uploads" folder in firebase storage
         mStorageRef= FirebaseStorage.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
+
+    //child("MUsers").child(userId).child("Uploads");
         mDatabaseRef =FirebaseDatabase.getInstance().getReference().child("MUsers").child(userId).child("Uploads");
+    //child("MUsers").child(userId).child("Uploads");
 
         chooseImageButton.setOnClickListener(new View.OnClickListener() {
             @Override
